@@ -10,358 +10,97 @@ public final class BatchProto {
   }
   public interface IdentityOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // optional int64 channelId = 1;
+    /**
+     * <code>optional int64 channelId = 1;</code>
+     *
+     * <pre>
+     **通道标示*
+     * </pre>
+     */
     boolean hasChannelId();
+    /**
+     * <code>optional int64 channelId = 1;</code>
+     *
+     * <pre>
+     **通道标示*
+     * </pre>
+     */
     long getChannelId();
-    
+
     // optional int64 pipelineId = 2;
+    /**
+     * <code>optional int64 pipelineId = 2;</code>
+     */
     boolean hasPipelineId();
+    /**
+     * <code>optional int64 pipelineId = 2;</code>
+     */
     long getPipelineId();
-    
+
     // optional int64 processId = 3;
+    /**
+     * <code>optional int64 processId = 3;</code>
+     */
     boolean hasProcessId();
+    /**
+     * <code>optional int64 processId = 3;</code>
+     */
     long getProcessId();
   }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.Identity}
+   *
+   * <pre>
+   **同步数据表示对象*
+   * </pre>
+   */
   public static final class Identity extends
       com.google.protobuf.GeneratedMessage
       implements IdentityOrBuilder {
     // Use Identity.newBuilder() to construct.
-    private Identity(Builder builder) {
+    private Identity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Identity(boolean noInit) {}
-    
+    private Identity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Identity defaultInstance;
     public static Identity getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Identity getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // optional int64 channelId = 1;
-    public static final int CHANNELID_FIELD_NUMBER = 1;
-    private long channelId_;
-    public boolean hasChannelId() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public long getChannelId() {
-      return channelId_;
-    }
-    
-    // optional int64 pipelineId = 2;
-    public static final int PIPELINEID_FIELD_NUMBER = 2;
-    private long pipelineId_;
-    public boolean hasPipelineId() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public long getPipelineId() {
-      return pipelineId_;
-    }
-    
-    // optional int64 processId = 3;
-    public static final int PROCESSID_FIELD_NUMBER = 3;
-    private long processId_;
-    public boolean hasProcessId() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    public long getProcessId() {
-      return processId_;
-    }
-    
-    private void initFields() {
-      channelId_ = 0L;
-      pipelineId_ = 0L;
-      processId_ = 0L;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt64(1, channelId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt64(2, pipelineId_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt64(3, processId_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, channelId_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, pipelineId_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, processId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+    private Identity(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_fieldAccessorTable;
-      }
-      
-      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        channelId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pipelineId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        processId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDescriptor();
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getDefaultInstanceForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity build() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity buildPartial() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.channelId_ = channelId_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.pipelineId_ = pipelineId_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.processId_ = processId_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity) {
-          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity other) {
-        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance()) return this;
-        if (other.hasChannelId()) {
-          setChannelId(other.getChannelId());
-        }
-        if (other.hasPipelineId()) {
-          setPipelineId(other.getPipelineId());
-        }
-        if (other.hasProcessId()) {
-          setProcessId(other.getProcessId());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -382,165 +121,750 @@ public final class BatchProto {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Identity> PARSER =
+        new com.google.protobuf.AbstractParser<Identity>() {
+      public Identity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Identity(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Identity> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional int64 channelId = 1;
+    public static final int CHANNELID_FIELD_NUMBER = 1;
+    private long channelId_;
+    /**
+     * <code>optional int64 channelId = 1;</code>
+     *
+     * <pre>
+     **通道标示*
+     * </pre>
+     */
+    public boolean hasChannelId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int64 channelId = 1;</code>
+     *
+     * <pre>
+     **通道标示*
+     * </pre>
+     */
+    public long getChannelId() {
+      return channelId_;
+    }
+
+    // optional int64 pipelineId = 2;
+    public static final int PIPELINEID_FIELD_NUMBER = 2;
+    private long pipelineId_;
+    /**
+     * <code>optional int64 pipelineId = 2;</code>
+     */
+    public boolean hasPipelineId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int64 pipelineId = 2;</code>
+     */
+    public long getPipelineId() {
+      return pipelineId_;
+    }
+
+    // optional int64 processId = 3;
+    public static final int PROCESSID_FIELD_NUMBER = 3;
+    private long processId_;
+    /**
+     * <code>optional int64 processId = 3;</code>
+     */
+    public boolean hasProcessId() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int64 processId = 3;</code>
+     */
+    public long getProcessId() {
+      return processId_;
+    }
+
+    private void initFields() {
+      channelId_ = 0L;
+      pipelineId_ = 0L;
+      processId_ = 0L;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt64(1, channelId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt64(2, pipelineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt64(3, processId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, channelId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pipelineId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, processId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.Identity}
+     *
+     * <pre>
+     **同步数据表示对象*
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder.class);
+      }
+
+      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        channelId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pipelineId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        processId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getDefaultInstanceForType() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity build() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity buildPartial() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.channelId_ = channelId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.pipelineId_ = pipelineId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.processId_ = processId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity) {
+          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity other) {
+        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance()) return this;
+        if (other.hasChannelId()) {
+          setChannelId(other.getChannelId());
+        }
+        if (other.hasPipelineId()) {
+          setPipelineId(other.getPipelineId());
+        }
+        if (other.hasProcessId()) {
+          setProcessId(other.getProcessId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
+
       // optional int64 channelId = 1;
       private long channelId_ ;
+      /**
+       * <code>optional int64 channelId = 1;</code>
+       *
+       * <pre>
+       **通道标示*
+       * </pre>
+       */
       public boolean hasChannelId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional int64 channelId = 1;</code>
+       *
+       * <pre>
+       **通道标示*
+       * </pre>
+       */
       public long getChannelId() {
         return channelId_;
       }
+      /**
+       * <code>optional int64 channelId = 1;</code>
+       *
+       * <pre>
+       **通道标示*
+       * </pre>
+       */
       public Builder setChannelId(long value) {
         bitField0_ |= 0x00000001;
         channelId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 channelId = 1;</code>
+       *
+       * <pre>
+       **通道标示*
+       * </pre>
+       */
       public Builder clearChannelId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         channelId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 pipelineId = 2;
       private long pipelineId_ ;
+      /**
+       * <code>optional int64 pipelineId = 2;</code>
+       */
       public boolean hasPipelineId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
+      /**
+       * <code>optional int64 pipelineId = 2;</code>
+       */
       public long getPipelineId() {
         return pipelineId_;
       }
+      /**
+       * <code>optional int64 pipelineId = 2;</code>
+       */
       public Builder setPipelineId(long value) {
         bitField0_ |= 0x00000002;
         pipelineId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 pipelineId = 2;</code>
+       */
       public Builder clearPipelineId() {
         bitField0_ = (bitField0_ & ~0x00000002);
         pipelineId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 processId = 3;
       private long processId_ ;
+      /**
+       * <code>optional int64 processId = 3;</code>
+       */
       public boolean hasProcessId() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
+      /**
+       * <code>optional int64 processId = 3;</code>
+       */
       public long getProcessId() {
         return processId_;
       }
+      /**
+       * <code>optional int64 processId = 3;</code>
+       */
       public Builder setProcessId(long value) {
         bitField0_ |= 0x00000004;
         processId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 processId = 3;</code>
+       */
       public Builder clearProcessId() {
         bitField0_ = (bitField0_ & ~0x00000004);
         processId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.Identity)
     }
-    
+
     static {
       defaultInstance = new Identity(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.Identity)
   }
-  
+
   public interface RowBatchOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     boolean hasIdentity();
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity();
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder();
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> 
         getRowsList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData getRows(int index);
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     int getRowsCount();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder> 
         getRowsOrBuilderList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder getRowsOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.RowBatch}
+   *
+   * <pre>
+   **数据包*
+   * </pre>
+   */
   public static final class RowBatch extends
       com.google.protobuf.GeneratedMessage
       implements RowBatchOrBuilder {
     // Use RowBatch.newBuilder() to construct.
-    private RowBatch(Builder builder) {
+    private RowBatch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private RowBatch(boolean noInit) {}
-    
+    private RowBatch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final RowBatch defaultInstance;
     public static RowBatch getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public RowBatch getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RowBatch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = identity_.toBuilder();
+              }
+              identity_ = input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identity_);
+                identity_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                rows_ = new java.util.ArrayList<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rows_.add(input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          rows_ = java.util.Collections.unmodifiableList(rows_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_fieldAccessorTable;
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<RowBatch> PARSER =
+        new com.google.protobuf.AbstractParser<RowBatch>() {
+      public RowBatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RowBatch(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RowBatch> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
     // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
     public static final int IDENTITY_FIELD_NUMBER = 1;
     private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity identity_;
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public boolean hasIdentity() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity() {
       return identity_;
     }
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder() {
       return identity_;
     }
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;
     public static final int ROWS_FIELD_NUMBER = 2;
     private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> rows_;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> getRowsList() {
       return rows_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder> 
         getRowsOrBuilderList() {
       return rows_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     public int getRowsCount() {
       return rows_.size();
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData getRows(int index) {
       return rows_.get(index);
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+     *
+     * <pre>
+     **每个batch里面的所有变更数据*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder getRowsOrBuilder(
         int index) {
       return rows_.get(index);
     }
-    
+
     private void initFields() {
       identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
       rows_ = java.util.Collections.emptyList();
@@ -549,11 +873,11 @@ public final class BatchProto {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -565,12 +889,12 @@ public final class BatchProto {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -584,94 +908,87 @@ public final class BatchProto {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.RowBatch}
+     *
+     * <pre>
+     **数据包*
+     * </pre>
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatchOrBuilder {
@@ -679,18 +996,21 @@ public final class BatchProto {
           getDescriptor() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_fieldAccessorTable;
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.Builder.class);
       }
-      
+
       // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -703,7 +1023,7 @@ public final class BatchProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (identityBuilder_ == null) {
@@ -720,20 +1040,20 @@ public final class BatchProto {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.getDescriptor();
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_descriptor;
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch getDefaultInstanceForType() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.getDefaultInstance();
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch build() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch result = buildPartial();
         if (!result.isInitialized()) {
@@ -741,17 +1061,7 @@ public final class BatchProto {
         }
         return result;
       }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch buildPartial() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch(this);
         int from_bitField0_ = bitField0_;
@@ -777,7 +1087,7 @@ public final class BatchProto {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch) {
           return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch)other);
@@ -786,7 +1096,7 @@ public final class BatchProto {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch other) {
         if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.getDefaultInstance()) return this;
         if (other.hasIdentity()) {
@@ -821,62 +1131,43 @@ public final class BatchProto {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.newBuilder();
-              if (hasIdentity()) {
-                subBuilder.mergeFrom(getIdentity());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setIdentity(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addRows(subBuilder.buildPartial());
-              break;
-            }
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
+
       // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
       private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder> identityBuilder_;
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public boolean hasIdentity() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity() {
         if (identityBuilder_ == null) {
           return identity_;
@@ -884,6 +1175,9 @@ public final class BatchProto {
           return identityBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder setIdentity(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity value) {
         if (identityBuilder_ == null) {
           if (value == null) {
@@ -897,6 +1191,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder setIdentity(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder builderForValue) {
         if (identityBuilder_ == null) {
@@ -908,6 +1205,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder mergeIdentity(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity value) {
         if (identityBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -924,6 +1224,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder clearIdentity() {
         if (identityBuilder_ == null) {
           identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
@@ -934,11 +1237,17 @@ public final class BatchProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder getIdentityBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getIdentityFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder() {
         if (identityBuilder_ != null) {
           return identityBuilder_.getMessageOrBuilder();
@@ -946,6 +1255,9 @@ public final class BatchProto {
           return identity_;
         }
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder> 
           getIdentityFieldBuilder() {
@@ -959,7 +1271,7 @@ public final class BatchProto {
         }
         return identityBuilder_;
       }
-      
+
       // repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;
       private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> rows_ =
         java.util.Collections.emptyList();
@@ -969,10 +1281,17 @@ public final class BatchProto {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder> rowsBuilder_;
-      
+
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> getRowsList() {
         if (rowsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(rows_);
@@ -980,6 +1299,13 @@ public final class BatchProto {
           return rowsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public int getRowsCount() {
         if (rowsBuilder_ == null) {
           return rows_.size();
@@ -987,6 +1313,13 @@ public final class BatchProto {
           return rowsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData getRows(int index) {
         if (rowsBuilder_ == null) {
           return rows_.get(index);
@@ -994,6 +1327,13 @@ public final class BatchProto {
           return rowsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder setRows(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData value) {
         if (rowsBuilder_ == null) {
@@ -1008,6 +1348,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder setRows(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder builderForValue) {
         if (rowsBuilder_ == null) {
@@ -1019,6 +1366,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder addRows(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData value) {
         if (rowsBuilder_ == null) {
           if (value == null) {
@@ -1032,6 +1386,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder addRows(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData value) {
         if (rowsBuilder_ == null) {
@@ -1046,6 +1407,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder addRows(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder builderForValue) {
         if (rowsBuilder_ == null) {
@@ -1057,6 +1425,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder addRows(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder builderForValue) {
         if (rowsBuilder_ == null) {
@@ -1068,6 +1443,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder addAllRows(
           java.lang.Iterable<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData> values) {
         if (rowsBuilder_ == null) {
@@ -1079,6 +1461,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder clearRows() {
         if (rowsBuilder_ == null) {
           rows_ = java.util.Collections.emptyList();
@@ -1089,6 +1478,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public Builder removeRows(int index) {
         if (rowsBuilder_ == null) {
           ensureRowsIsMutable();
@@ -1099,10 +1495,24 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder getRowsBuilder(
           int index) {
         return getRowsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder getRowsOrBuilder(
           int index) {
         if (rowsBuilder_ == null) {
@@ -1110,6 +1520,13 @@ public final class BatchProto {
           return rowsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder> 
            getRowsOrBuilderList() {
         if (rowsBuilder_ != null) {
@@ -1118,15 +1535,36 @@ public final class BatchProto {
           return java.util.Collections.unmodifiableList(rows_);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder addRowsBuilder() {
         return getRowsFieldBuilder().addBuilder(
             com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder addRowsBuilder(
           int index) {
         return getRowsFieldBuilder().addBuilder(
             index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.RowData rows = 2;</code>
+       *
+       * <pre>
+       **每个batch里面的所有变更数据*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder> 
            getRowsBuilderList() {
         return getRowsFieldBuilder().getBuilderList();
@@ -1145,99 +1583,273 @@ public final class BatchProto {
         }
         return rowsBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.RowBatch)
     }
-    
+
     static {
       defaultInstance = new RowBatch(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.RowBatch)
   }
-  
+
   public interface FileBatchOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     boolean hasIdentity();
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity();
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder();
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> 
         getFilesList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData getFiles(int index);
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     int getFilesCount();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder> 
         getFilesOrBuilderList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder getFilesOrBuilder(
         int index);
   }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.FileBatch}
+   */
   public static final class FileBatch extends
       com.google.protobuf.GeneratedMessage
       implements FileBatchOrBuilder {
     // Use FileBatch.newBuilder() to construct.
-    private FileBatch(Builder builder) {
+    private FileBatch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private FileBatch(boolean noInit) {}
-    
+    private FileBatch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final FileBatch defaultInstance;
     public static FileBatch getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public FileBatch getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileBatch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = identity_.toBuilder();
+              }
+              identity_ = input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(identity_);
+                identity_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                files_ = new java.util.ArrayList<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              files_.add(input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          files_ = java.util.Collections.unmodifiableList(files_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_fieldAccessorTable;
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<FileBatch> PARSER =
+        new com.google.protobuf.AbstractParser<FileBatch>() {
+      public FileBatch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FileBatch(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileBatch> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
     // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
     public static final int IDENTITY_FIELD_NUMBER = 1;
     private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity identity_;
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public boolean hasIdentity() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity() {
       return identity_;
     }
+    /**
+     * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder() {
       return identity_;
     }
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;
     public static final int FILES_FIELD_NUMBER = 2;
     private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> files_;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> getFilesList() {
       return files_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder> 
         getFilesOrBuilderList() {
       return files_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     public int getFilesCount() {
       return files_.size();
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData getFiles(int index) {
       return files_.get(index);
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+     *
+     * <pre>
+     **每个batch里面变更数据所关联的文件信息*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder getFilesOrBuilder(
         int index) {
       return files_.get(index);
     }
-    
+
     private void initFields() {
       identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
       files_ = java.util.Collections.emptyList();
@@ -1246,11 +1858,11 @@ public final class BatchProto {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -1262,12 +1874,12 @@ public final class BatchProto {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1281,94 +1893,83 @@ public final class BatchProto {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.FileBatch}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatchOrBuilder {
@@ -1376,18 +1977,21 @@ public final class BatchProto {
           getDescriptor() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_fieldAccessorTable;
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.Builder.class);
       }
-      
+
       // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1400,7 +2004,7 @@ public final class BatchProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         if (identityBuilder_ == null) {
@@ -1417,20 +2021,20 @@ public final class BatchProto {
         }
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.getDescriptor();
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_descriptor;
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch getDefaultInstanceForType() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.getDefaultInstance();
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch build() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch result = buildPartial();
         if (!result.isInitialized()) {
@@ -1438,17 +2042,7 @@ public final class BatchProto {
         }
         return result;
       }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch buildPartial() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch(this);
         int from_bitField0_ = bitField0_;
@@ -1474,7 +2068,7 @@ public final class BatchProto {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch) {
           return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch)other);
@@ -1483,7 +2077,7 @@ public final class BatchProto {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch other) {
         if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.getDefaultInstance()) return this;
         if (other.hasIdentity()) {
@@ -1518,62 +2112,43 @@ public final class BatchProto {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 10: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.newBuilder();
-              if (hasIdentity()) {
-                subBuilder.mergeFrom(getIdentity());
-              }
-              input.readMessage(subBuilder, extensionRegistry);
-              setIdentity(subBuilder.buildPartial());
-              break;
-            }
-            case 18: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addFiles(subBuilder.buildPartial());
-              break;
-            }
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
+
       // optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;
       private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder> identityBuilder_;
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public boolean hasIdentity() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity getIdentity() {
         if (identityBuilder_ == null) {
           return identity_;
@@ -1581,6 +2156,9 @@ public final class BatchProto {
           return identityBuilder_.getMessage();
         }
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder setIdentity(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity value) {
         if (identityBuilder_ == null) {
           if (value == null) {
@@ -1594,6 +2172,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder setIdentity(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder builderForValue) {
         if (identityBuilder_ == null) {
@@ -1605,6 +2186,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder mergeIdentity(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity value) {
         if (identityBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
@@ -1621,6 +2205,9 @@ public final class BatchProto {
         bitField0_ |= 0x00000001;
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public Builder clearIdentity() {
         if (identityBuilder_ == null) {
           identity_ = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.getDefaultInstance();
@@ -1631,11 +2218,17 @@ public final class BatchProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder getIdentityBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getIdentityFieldBuilder().getBuilder();
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder getIdentityOrBuilder() {
         if (identityBuilder_ != null) {
           return identityBuilder_.getMessageOrBuilder();
@@ -1643,6 +2236,9 @@ public final class BatchProto {
           return identity_;
         }
       }
+      /**
+       * <code>optional .com.alibaba.otter.node.etl.model.protobuf.Identity identity = 1;</code>
+       */
       private com.google.protobuf.SingleFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.IdentityOrBuilder> 
           getIdentityFieldBuilder() {
@@ -1656,7 +2252,7 @@ public final class BatchProto {
         }
         return identityBuilder_;
       }
-      
+
       // repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;
       private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> files_ =
         java.util.Collections.emptyList();
@@ -1666,10 +2262,17 @@ public final class BatchProto {
           bitField0_ |= 0x00000002;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder> filesBuilder_;
-      
+
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> getFilesList() {
         if (filesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(files_);
@@ -1677,6 +2280,13 @@ public final class BatchProto {
           return filesBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public int getFilesCount() {
         if (filesBuilder_ == null) {
           return files_.size();
@@ -1684,6 +2294,13 @@ public final class BatchProto {
           return filesBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData getFiles(int index) {
         if (filesBuilder_ == null) {
           return files_.get(index);
@@ -1691,6 +2308,13 @@ public final class BatchProto {
           return filesBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder setFiles(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData value) {
         if (filesBuilder_ == null) {
@@ -1705,6 +2329,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder setFiles(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -1716,6 +2347,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder addFiles(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData value) {
         if (filesBuilder_ == null) {
           if (value == null) {
@@ -1729,6 +2367,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder addFiles(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData value) {
         if (filesBuilder_ == null) {
@@ -1743,6 +2388,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder addFiles(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -1754,6 +2406,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder addFiles(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder builderForValue) {
         if (filesBuilder_ == null) {
@@ -1765,6 +2424,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder addAllFiles(
           java.lang.Iterable<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData> values) {
         if (filesBuilder_ == null) {
@@ -1776,6 +2442,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder clearFiles() {
         if (filesBuilder_ == null) {
           files_ = java.util.Collections.emptyList();
@@ -1786,6 +2459,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public Builder removeFiles(int index) {
         if (filesBuilder_ == null) {
           ensureFilesIsMutable();
@@ -1796,10 +2476,24 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder getFilesBuilder(
           int index) {
         return getFilesFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder getFilesOrBuilder(
           int index) {
         if (filesBuilder_ == null) {
@@ -1807,6 +2501,13 @@ public final class BatchProto {
           return filesBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder> 
            getFilesOrBuilderList() {
         if (filesBuilder_ != null) {
@@ -1815,15 +2516,36 @@ public final class BatchProto {
           return java.util.Collections.unmodifiableList(files_);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder addFilesBuilder() {
         return getFilesFieldBuilder().addBuilder(
             com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder addFilesBuilder(
           int index) {
         return getFilesFieldBuilder().addBuilder(
             index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.FileData files = 2;</code>
+       *
+       * <pre>
+       **每个batch里面变更数据所关联的文件信息*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder> 
            getFilesBuilderList() {
         return getFilesFieldBuilder().getBuilderList();
@@ -1842,515 +2564,1366 @@ public final class BatchProto {
         }
         return filesBuilder_;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.FileBatch)
     }
-    
+
     static {
       defaultInstance = new FileBatch(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.FileBatch)
   }
-  
+
   public interface RowDataOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // optional int64 tableId = 1;
+    /**
+     * <code>optional int64 tableId = 1;</code>
+     */
     boolean hasTableId();
+    /**
+     * <code>optional int64 tableId = 1;</code>
+     */
     long getTableId();
-    
+
     // optional string schemaName = 2;
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
     boolean hasSchemaName();
-    String getSchemaName();
-    
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
+    java.lang.String getSchemaName();
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getSchemaNameBytes();
+
     // optional string tableName = 3;
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
     boolean hasTableName();
-    String getTableName();
-    
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
+    java.lang.String getTableName();
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTableNameBytes();
+
     // optional string eventType = 4;
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
     boolean hasEventType();
-    String getEventType();
-    
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
+    java.lang.String getEventType();
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getEventTypeBytes();
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> 
         getOldKeysList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getOldKeys(int index);
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     int getOldKeysCount();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getOldKeysOrBuilderList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getOldKeysOrBuilder(
         int index);
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> 
         getKeysList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getKeys(int index);
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     int getKeysCount();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getKeysOrBuilderList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getKeysOrBuilder(
         int index);
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> 
         getColumnsList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getColumns(int index);
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     int getColumnsCount();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getColumnsOrBuilderList();
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getColumnsOrBuilder(
         int index);
-    
+
     // optional int64 executeTime = 8;
+    /**
+     * <code>optional int64 executeTime = 8;</code>
+     *
+     * <pre>
+     **变更数据的业务时间*
+     * </pre>
+     */
     boolean hasExecuteTime();
+    /**
+     * <code>optional int64 executeTime = 8;</code>
+     *
+     * <pre>
+     **变更数据的业务时间*
+     * </pre>
+     */
     long getExecuteTime();
-    
+
     // optional int64 pairId = 9;
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
     boolean hasPairId();
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
     long getPairId();
-    
+
     // optional string syncMode = 10;
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
     boolean hasSyncMode();
-    String getSyncMode();
-    
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
+    java.lang.String getSyncMode();
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSyncModeBytes();
+
     // optional string syncConsistency = 11;
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
     boolean hasSyncConsistency();
-    String getSyncConsistency();
-    
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
+    java.lang.String getSyncConsistency();
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSyncConsistencyBytes();
+
     // optional int64 size = 12;
+    /**
+     * <code>optional int64 size = 12;</code>
+     *
+     * <pre>
+     ** eventsize *
+     * </pre>
+     */
     boolean hasSize();
+    /**
+     * <code>optional int64 size = 12;</code>
+     *
+     * <pre>
+     ** eventsize *
+     * </pre>
+     */
     long getSize();
-    
+
     // optional bool remedy = 13;
+    /**
+     * <code>optional bool remedy = 13;</code>
+     *
+     * <pre>
+     ** isRemedy *
+     * </pre>
+     */
     boolean hasRemedy();
+    /**
+     * <code>optional bool remedy = 13;</code>
+     *
+     * <pre>
+     ** isRemedy *
+     * </pre>
+     */
     boolean getRemedy();
-    
+
     // optional string sql = 14;
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
     boolean hasSql();
-    String getSql();
-    
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    java.lang.String getSql();
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSqlBytes();
+
     // optional string ddlSchemaName = 15;
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
     boolean hasDdlSchemaName();
-    String getDdlSchemaName();
-    
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
+    java.lang.String getDdlSchemaName();
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getDdlSchemaNameBytes();
+
     // optional string hint = 16;
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
     boolean hasHint();
-    String getHint();
-    
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    java.lang.String getHint();
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getHintBytes();
+
     // optional bool withoutSchema = 17;
+    /**
+     * <code>optional bool withoutSchema = 17;</code>
+     *
+     * <pre>
+     ** without schema *
+     * </pre>
+     */
     boolean hasWithoutSchema();
+    /**
+     * <code>optional bool withoutSchema = 17;</code>
+     *
+     * <pre>
+     ** without schema *
+     * </pre>
+     */
     boolean getWithoutSchema();
   }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.RowData}
+   *
+   * <pre>
+   **数据*
+   * </pre>
+   */
   public static final class RowData extends
       com.google.protobuf.GeneratedMessage
       implements RowDataOrBuilder {
     // Use RowData.newBuilder() to construct.
-    private RowData(Builder builder) {
+    private RowData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private RowData(boolean noInit) {}
-    
+    private RowData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final RowData defaultInstance;
     public static RowData getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public RowData getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RowData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              tableId_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              schemaName_ = input.readBytes();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              tableName_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              eventType_ = input.readBytes();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                oldKeys_ = new java.util.ArrayList<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              oldKeys_.add(input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.PARSER, extensionRegistry));
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                keys_ = new java.util.ArrayList<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              keys_.add(input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.PARSER, extensionRegistry));
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                columns_ = new java.util.ArrayList<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              columns_.add(input.readMessage(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.PARSER, extensionRegistry));
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000010;
+              executeTime_ = input.readInt64();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000020;
+              pairId_ = input.readInt64();
+              break;
+            }
+            case 82: {
+              bitField0_ |= 0x00000040;
+              syncMode_ = input.readBytes();
+              break;
+            }
+            case 90: {
+              bitField0_ |= 0x00000080;
+              syncConsistency_ = input.readBytes();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000100;
+              size_ = input.readInt64();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00000200;
+              remedy_ = input.readBool();
+              break;
+            }
+            case 114: {
+              bitField0_ |= 0x00000400;
+              sql_ = input.readBytes();
+              break;
+            }
+            case 122: {
+              bitField0_ |= 0x00000800;
+              ddlSchemaName_ = input.readBytes();
+              break;
+            }
+            case 130: {
+              bitField0_ |= 0x00001000;
+              hint_ = input.readBytes();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00002000;
+              withoutSchema_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          oldKeys_ = java.util.Collections.unmodifiableList(oldKeys_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          keys_ = java.util.Collections.unmodifiableList(keys_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          columns_ = java.util.Collections.unmodifiableList(columns_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_fieldAccessorTable;
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<RowData> PARSER =
+        new com.google.protobuf.AbstractParser<RowData>() {
+      public RowData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RowData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RowData> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
     // optional int64 tableId = 1;
     public static final int TABLEID_FIELD_NUMBER = 1;
     private long tableId_;
+    /**
+     * <code>optional int64 tableId = 1;</code>
+     */
     public boolean hasTableId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
+    /**
+     * <code>optional int64 tableId = 1;</code>
+     */
     public long getTableId() {
       return tableId_;
     }
-    
+
     // optional string schemaName = 2;
     public static final int SCHEMANAME_FIELD_NUMBER = 2;
     private java.lang.Object schemaName_;
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
     public boolean hasSchemaName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getSchemaName() {
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
+    public java.lang.String getSchemaName() {
       java.lang.Object ref = schemaName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           schemaName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSchemaNameBytes() {
+    /**
+     * <code>optional string schemaName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSchemaNameBytes() {
       java.lang.Object ref = schemaName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         schemaName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional string tableName = 3;
     public static final int TABLENAME_FIELD_NUMBER = 3;
     private java.lang.Object tableName_;
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
     public boolean hasTableName() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getTableName() {
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
+    public java.lang.String getTableName() {
       java.lang.Object ref = tableName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           tableName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getTableNameBytes() {
+    /**
+     * <code>optional string tableName = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
       java.lang.Object ref = tableName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         tableName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional string eventType = 4;
     public static final int EVENTTYPE_FIELD_NUMBER = 4;
     private java.lang.Object eventType_;
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
     public boolean hasEventType() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public String getEventType() {
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
+    public java.lang.String getEventType() {
       java.lang.Object ref = eventType_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           eventType_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getEventTypeBytes() {
+    /**
+     * <code>optional string eventType = 4;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D)*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getEventTypeBytes() {
       java.lang.Object ref = eventType_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         eventType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;
     public static final int OLDKEYS_FIELD_NUMBER = 5;
     private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> oldKeys_;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getOldKeysList() {
       return oldKeys_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getOldKeysOrBuilderList() {
       return oldKeys_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     public int getOldKeysCount() {
       return oldKeys_.size();
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getOldKeys(int index) {
       return oldKeys_.get(index);
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+     *
+     * <pre>
+     **变更前的主键，可能是复合主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getOldKeysOrBuilder(
         int index) {
       return oldKeys_.get(index);
     }
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;
     public static final int KEYS_FIELD_NUMBER = 6;
     private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> keys_;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getKeysList() {
       return keys_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getKeysOrBuilderList() {
       return keys_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     public int getKeysCount() {
       return keys_.size();
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getKeys(int index) {
       return keys_.get(index);
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+     *
+     * <pre>
+     **变更后的主键，可能是复合主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getKeysOrBuilder(
         int index) {
       return keys_.get(index);
     }
-    
+
     // repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;
     public static final int COLUMNS_FIELD_NUMBER = 7;
     private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> columns_;
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getColumnsList() {
       return columns_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
         getColumnsOrBuilderList() {
       return columns_;
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     public int getColumnsCount() {
       return columns_.size();
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getColumns(int index) {
       return columns_.get(index);
     }
+    /**
+     * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+     *
+     * <pre>
+     **变更数据的每列变更信息,不包含主键*
+     * </pre>
+     */
     public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getColumnsOrBuilder(
         int index) {
       return columns_.get(index);
     }
-    
+
     // optional int64 executeTime = 8;
     public static final int EXECUTETIME_FIELD_NUMBER = 8;
     private long executeTime_;
+    /**
+     * <code>optional int64 executeTime = 8;</code>
+     *
+     * <pre>
+     **变更数据的业务时间*
+     * </pre>
+     */
     public boolean hasExecuteTime() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
+    /**
+     * <code>optional int64 executeTime = 8;</code>
+     *
+     * <pre>
+     **变更数据的业务时间*
+     * </pre>
+     */
     public long getExecuteTime() {
       return executeTime_;
     }
-    
+
     // optional int64 pairId = 9;
     public static final int PAIRID_FIELD_NUMBER = 9;
     private long pairId_;
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
     public boolean hasPairId() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
     public long getPairId() {
       return pairId_;
     }
-    
+
     // optional string syncMode = 10;
     public static final int SYNCMODE_FIELD_NUMBER = 10;
     private java.lang.Object syncMode_;
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
     public boolean hasSyncMode() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public String getSyncMode() {
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
+    public java.lang.String getSyncMode() {
       java.lang.Object ref = syncMode_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           syncMode_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSyncModeBytes() {
+    /**
+     * <code>optional string syncMode = 10;</code>
+     *
+     * <pre>
+     **同步模式(R/F)*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSyncModeBytes() {
       java.lang.Object ref = syncMode_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         syncMode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional string syncConsistency = 11;
     public static final int SYNCCONSISTENCY_FIELD_NUMBER = 11;
     private java.lang.Object syncConsistency_;
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
     public boolean hasSyncConsistency() {
       return ((bitField0_ & 0x00000080) == 0x00000080);
     }
-    public String getSyncConsistency() {
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
+    public java.lang.String getSyncConsistency() {
       java.lang.Object ref = syncConsistency_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           syncConsistency_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSyncConsistencyBytes() {
+    /**
+     * <code>optional string syncConsistency = 11;</code>
+     *
+     * <pre>
+     **同步一致性(B/S/M) *
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSyncConsistencyBytes() {
       java.lang.Object ref = syncConsistency_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         syncConsistency_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional int64 size = 12;
     public static final int SIZE_FIELD_NUMBER = 12;
     private long size_;
+    /**
+     * <code>optional int64 size = 12;</code>
+     *
+     * <pre>
+     ** eventsize *
+     * </pre>
+     */
     public boolean hasSize() {
       return ((bitField0_ & 0x00000100) == 0x00000100);
     }
+    /**
+     * <code>optional int64 size = 12;</code>
+     *
+     * <pre>
+     ** eventsize *
+     * </pre>
+     */
     public long getSize() {
       return size_;
     }
-    
+
     // optional bool remedy = 13;
     public static final int REMEDY_FIELD_NUMBER = 13;
     private boolean remedy_;
+    /**
+     * <code>optional bool remedy = 13;</code>
+     *
+     * <pre>
+     ** isRemedy *
+     * </pre>
+     */
     public boolean hasRemedy() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
+    /**
+     * <code>optional bool remedy = 13;</code>
+     *
+     * <pre>
+     ** isRemedy *
+     * </pre>
+     */
     public boolean getRemedy() {
       return remedy_;
     }
-    
+
     // optional string sql = 14;
     public static final int SQL_FIELD_NUMBER = 14;
     private java.lang.Object sql_;
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
     public boolean hasSql() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
-    public String getSql() {
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    public java.lang.String getSql() {
       java.lang.Object ref = sql_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           sql_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSqlBytes() {
+    /**
+     * <code>optional string sql = 14;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSqlBytes() {
       java.lang.Object ref = sql_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         sql_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional string ddlSchemaName = 15;
     public static final int DDLSCHEMANAME_FIELD_NUMBER = 15;
     private java.lang.Object ddlSchemaName_;
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
     public boolean hasDdlSchemaName() {
       return ((bitField0_ & 0x00000800) == 0x00000800);
     }
-    public String getDdlSchemaName() {
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
+    public java.lang.String getDdlSchemaName() {
       java.lang.Object ref = ddlSchemaName_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           ddlSchemaName_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDdlSchemaNameBytes() {
+    /**
+     * <code>optional string ddlSchemaName = 15;</code>
+     *
+     * <pre>
+     ** current ddl schemaName *
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getDdlSchemaNameBytes() {
       java.lang.Object ref = ddlSchemaName_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         ddlSchemaName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional string hint = 16;
     public static final int HINT_FIELD_NUMBER = 16;
     private java.lang.Object hint_;
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
     public boolean hasHint() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
-    public String getHint() {
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    public java.lang.String getHint() {
       java.lang.Object ref = hint_;
-      if (ref instanceof String) {
-        return (String) ref;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
           hint_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getHintBytes() {
+    /**
+     * <code>optional string hint = 16;</code>
+     *
+     * <pre>
+     ** dml/ddl sql *
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getHintBytes() {
       java.lang.Object ref = hint_;
-      if (ref instanceof String) {
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         hint_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
+
     // optional bool withoutSchema = 17;
     public static final int WITHOUTSCHEMA_FIELD_NUMBER = 17;
     private boolean withoutSchema_;
+    /**
+     * <code>optional bool withoutSchema = 17;</code>
+     *
+     * <pre>
+     ** without schema *
+     * </pre>
+     */
     public boolean hasWithoutSchema() {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
+    /**
+     * <code>optional bool withoutSchema = 17;</code>
+     *
+     * <pre>
+     ** without schema *
+     * </pre>
+     */
     public boolean getWithoutSchema() {
       return withoutSchema_;
     }
-    
+
     private void initFields() {
       tableId_ = 0L;
       schemaName_ = "";
@@ -2374,11 +3947,11 @@ public final class BatchProto {
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
@@ -2435,12 +4008,12 @@ public final class BatchProto {
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2514,94 +4087,87 @@ public final class BatchProto {
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
+
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
     public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.RowData}
+     *
+     * <pre>
+     **数据*
+     * </pre>
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowDataOrBuilder {
@@ -2609,18 +4175,21 @@ public final class BatchProto {
           getDescriptor() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_fieldAccessorTable;
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder.class);
       }
-      
+
       // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2634,7 +4203,7 @@ public final class BatchProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
         tableId_ = 0L;
@@ -2685,20 +4254,20 @@ public final class BatchProto {
         bitField0_ = (bitField0_ & ~0x00010000);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.getDescriptor();
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_descriptor;
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData getDefaultInstanceForType() {
         return com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.getDefaultInstance();
       }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData build() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData result = buildPartial();
         if (!result.isInitialized()) {
@@ -2706,17 +4275,7 @@ public final class BatchProto {
         }
         return result;
       }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
+
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData buildPartial() {
         com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData(this);
         int from_bitField0_ = bitField0_;
@@ -2808,7 +4367,7 @@ public final class BatchProto {
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData) {
           return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData)other);
@@ -2817,20 +4376,26 @@ public final class BatchProto {
           return this;
         }
       }
-      
+
       public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData other) {
         if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.getDefaultInstance()) return this;
         if (other.hasTableId()) {
           setTableId(other.getTableId());
         }
         if (other.hasSchemaName()) {
-          setSchemaName(other.getSchemaName());
+          bitField0_ |= 0x00000002;
+          schemaName_ = other.schemaName_;
+          onChanged();
         }
         if (other.hasTableName()) {
-          setTableName(other.getTableName());
+          bitField0_ |= 0x00000004;
+          tableName_ = other.tableName_;
+          onChanged();
         }
         if (other.hasEventType()) {
-          setEventType(other.getEventType());
+          bitField0_ |= 0x00000008;
+          eventType_ = other.eventType_;
+          onChanged();
         }
         if (oldKeysBuilder_ == null) {
           if (!other.oldKeys_.isEmpty()) {
@@ -2917,10 +4482,14 @@ public final class BatchProto {
           setPairId(other.getPairId());
         }
         if (other.hasSyncMode()) {
-          setSyncMode(other.getSyncMode());
+          bitField0_ |= 0x00000200;
+          syncMode_ = other.syncMode_;
+          onChanged();
         }
         if (other.hasSyncConsistency()) {
-          setSyncConsistency(other.getSyncConsistency());
+          bitField0_ |= 0x00000400;
+          syncConsistency_ = other.syncConsistency_;
+          onChanged();
         }
         if (other.hasSize()) {
           setSize(other.getSize());
@@ -2929,13 +4498,19 @@ public final class BatchProto {
           setRemedy(other.getRemedy());
         }
         if (other.hasSql()) {
-          setSql(other.getSql());
+          bitField0_ |= 0x00002000;
+          sql_ = other.sql_;
+          onChanged();
         }
         if (other.hasDdlSchemaName()) {
-          setDdlSchemaName(other.getDdlSchemaName());
+          bitField0_ |= 0x00004000;
+          ddlSchemaName_ = other.ddlSchemaName_;
+          onChanged();
         }
         if (other.hasHint()) {
-          setHint(other.getHint());
+          bitField0_ |= 0x00008000;
+          hint_ = other.hint_;
+          onChanged();
         }
         if (other.hasWithoutSchema()) {
           setWithoutSchema(other.getWithoutSchema());
@@ -2943,165 +4518,106 @@ public final class BatchProto {
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
-              }
-              break;
-            }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              tableId_ = input.readInt64();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              schemaName_ = input.readBytes();
-              break;
-            }
-            case 26: {
-              bitField0_ |= 0x00000004;
-              tableName_ = input.readBytes();
-              break;
-            }
-            case 34: {
-              bitField0_ |= 0x00000008;
-              eventType_ = input.readBytes();
-              break;
-            }
-            case 42: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addOldKeys(subBuilder.buildPartial());
-              break;
-            }
-            case 50: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addKeys(subBuilder.buildPartial());
-              break;
-            }
-            case 58: {
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder subBuilder = com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.newBuilder();
-              input.readMessage(subBuilder, extensionRegistry);
-              addColumns(subBuilder.buildPartial());
-              break;
-            }
-            case 64: {
-              bitField0_ |= 0x00000080;
-              executeTime_ = input.readInt64();
-              break;
-            }
-            case 72: {
-              bitField0_ |= 0x00000100;
-              pairId_ = input.readInt64();
-              break;
-            }
-            case 82: {
-              bitField0_ |= 0x00000200;
-              syncMode_ = input.readBytes();
-              break;
-            }
-            case 90: {
-              bitField0_ |= 0x00000400;
-              syncConsistency_ = input.readBytes();
-              break;
-            }
-            case 96: {
-              bitField0_ |= 0x00000800;
-              size_ = input.readInt64();
-              break;
-            }
-            case 104: {
-              bitField0_ |= 0x00001000;
-              remedy_ = input.readBool();
-              break;
-            }
-            case 114: {
-              bitField0_ |= 0x00002000;
-              sql_ = input.readBytes();
-              break;
-            }
-            case 122: {
-              bitField0_ |= 0x00004000;
-              ddlSchemaName_ = input.readBytes();
-              break;
-            }
-            case 130: {
-              bitField0_ |= 0x00008000;
-              hint_ = input.readBytes();
-              break;
-            }
-            case 136: {
-              bitField0_ |= 0x00010000;
-              withoutSchema_ = input.readBool();
-              break;
-            }
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
           }
         }
+        return this;
       }
-      
       private int bitField0_;
-      
+
       // optional int64 tableId = 1;
       private long tableId_ ;
+      /**
+       * <code>optional int64 tableId = 1;</code>
+       */
       public boolean hasTableId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
+      /**
+       * <code>optional int64 tableId = 1;</code>
+       */
       public long getTableId() {
         return tableId_;
       }
+      /**
+       * <code>optional int64 tableId = 1;</code>
+       */
       public Builder setTableId(long value) {
         bitField0_ |= 0x00000001;
         tableId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 tableId = 1;</code>
+       */
       public Builder clearTableId() {
         bitField0_ = (bitField0_ & ~0x00000001);
         tableId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional string schemaName = 2;
       private java.lang.Object schemaName_ = "";
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
       public boolean hasSchemaName() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getSchemaName() {
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
+      public java.lang.String getSchemaName() {
         java.lang.Object ref = schemaName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           schemaName_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSchemaName(String value) {
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSchemaNameBytes() {
+        java.lang.Object ref = schemaName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schemaName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
+      public Builder setSchemaName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3110,34 +4626,72 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
       public Builder clearSchemaName() {
         bitField0_ = (bitField0_ & ~0x00000002);
         schemaName_ = getDefaultInstance().getSchemaName();
         onChanged();
         return this;
       }
-      void setSchemaName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string schemaName = 2;</code>
+       */
+      public Builder setSchemaNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         schemaName_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string tableName = 3;
       private java.lang.Object tableName_ = "";
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
       public boolean hasTableName() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getTableName() {
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
+      public java.lang.String getTableName() {
         java.lang.Object ref = tableName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           tableName_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setTableName(String value) {
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTableNameBytes() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
+      public Builder setTableName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3146,34 +4700,88 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
       public Builder clearTableName() {
         bitField0_ = (bitField0_ & ~0x00000004);
         tableName_ = getDefaultInstance().getTableName();
         onChanged();
         return this;
       }
-      void setTableName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string tableName = 3;</code>
+       */
+      public Builder setTableNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         tableName_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string eventType = 4;
       private java.lang.Object eventType_ = "";
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
       public boolean hasEventType() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public String getEventType() {
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
+      public java.lang.String getEventType() {
         java.lang.Object ref = eventType_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           eventType_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setEventType(String value) {
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getEventTypeBytes() {
+        java.lang.Object ref = eventType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
+      public Builder setEventType(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3182,18 +4790,37 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
       public Builder clearEventType() {
         bitField0_ = (bitField0_ & ~0x00000008);
         eventType_ = getDefaultInstance().getEventType();
         onChanged();
         return this;
       }
-      void setEventType(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000008;
+      /**
+       * <code>optional string eventType = 4;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D)*
+       * </pre>
+       */
+      public Builder setEventTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
         eventType_ = value;
         onChanged();
+        return this;
       }
-      
+
       // repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;
       private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> oldKeys_ =
         java.util.Collections.emptyList();
@@ -3203,10 +4830,17 @@ public final class BatchProto {
           bitField0_ |= 0x00000010;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> oldKeysBuilder_;
-      
+
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getOldKeysList() {
         if (oldKeysBuilder_ == null) {
           return java.util.Collections.unmodifiableList(oldKeys_);
@@ -3214,6 +4848,13 @@ public final class BatchProto {
           return oldKeysBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public int getOldKeysCount() {
         if (oldKeysBuilder_ == null) {
           return oldKeys_.size();
@@ -3221,6 +4862,13 @@ public final class BatchProto {
           return oldKeysBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getOldKeys(int index) {
         if (oldKeysBuilder_ == null) {
           return oldKeys_.get(index);
@@ -3228,6 +4876,13 @@ public final class BatchProto {
           return oldKeysBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder setOldKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (oldKeysBuilder_ == null) {
@@ -3242,6 +4897,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder setOldKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (oldKeysBuilder_ == null) {
@@ -3253,6 +4915,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addOldKeys(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (oldKeysBuilder_ == null) {
           if (value == null) {
@@ -3266,6 +4935,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addOldKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (oldKeysBuilder_ == null) {
@@ -3280,6 +4956,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addOldKeys(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (oldKeysBuilder_ == null) {
@@ -3291,6 +4974,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addOldKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (oldKeysBuilder_ == null) {
@@ -3302,6 +4992,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addAllOldKeys(
           java.lang.Iterable<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> values) {
         if (oldKeysBuilder_ == null) {
@@ -3313,6 +5010,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder clearOldKeys() {
         if (oldKeysBuilder_ == null) {
           oldKeys_ = java.util.Collections.emptyList();
@@ -3323,6 +5027,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder removeOldKeys(int index) {
         if (oldKeysBuilder_ == null) {
           ensureOldKeysIsMutable();
@@ -3333,10 +5044,24 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder getOldKeysBuilder(
           int index) {
         return getOldKeysFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getOldKeysOrBuilder(
           int index) {
         if (oldKeysBuilder_ == null) {
@@ -3344,6 +5069,13 @@ public final class BatchProto {
           return oldKeysBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
            getOldKeysOrBuilderList() {
         if (oldKeysBuilder_ != null) {
@@ -3352,15 +5084,36 @@ public final class BatchProto {
           return java.util.Collections.unmodifiableList(oldKeys_);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addOldKeysBuilder() {
         return getOldKeysFieldBuilder().addBuilder(
             com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addOldKeysBuilder(
           int index) {
         return getOldKeysFieldBuilder().addBuilder(
             index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column oldKeys = 5;</code>
+       *
+       * <pre>
+       **变更前的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder> 
            getOldKeysBuilderList() {
         return getOldKeysFieldBuilder().getBuilderList();
@@ -3379,7 +5132,7 @@ public final class BatchProto {
         }
         return oldKeysBuilder_;
       }
-      
+
       // repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;
       private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> keys_ =
         java.util.Collections.emptyList();
@@ -3389,10 +5142,17 @@ public final class BatchProto {
           bitField0_ |= 0x00000020;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> keysBuilder_;
-      
+
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getKeysList() {
         if (keysBuilder_ == null) {
           return java.util.Collections.unmodifiableList(keys_);
@@ -3400,6 +5160,13 @@ public final class BatchProto {
           return keysBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public int getKeysCount() {
         if (keysBuilder_ == null) {
           return keys_.size();
@@ -3407,6 +5174,13 @@ public final class BatchProto {
           return keysBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getKeys(int index) {
         if (keysBuilder_ == null) {
           return keys_.get(index);
@@ -3414,6 +5188,13 @@ public final class BatchProto {
           return keysBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder setKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (keysBuilder_ == null) {
@@ -3428,6 +5209,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder setKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (keysBuilder_ == null) {
@@ -3439,6 +5227,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addKeys(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (keysBuilder_ == null) {
           if (value == null) {
@@ -3452,6 +5247,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (keysBuilder_ == null) {
@@ -3466,6 +5268,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addKeys(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (keysBuilder_ == null) {
@@ -3477,6 +5286,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addKeys(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (keysBuilder_ == null) {
@@ -3488,6 +5304,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder addAllKeys(
           java.lang.Iterable<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> values) {
         if (keysBuilder_ == null) {
@@ -3499,6 +5322,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder clearKeys() {
         if (keysBuilder_ == null) {
           keys_ = java.util.Collections.emptyList();
@@ -3509,6 +5339,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public Builder removeKeys(int index) {
         if (keysBuilder_ == null) {
           ensureKeysIsMutable();
@@ -3519,10 +5356,24 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder getKeysBuilder(
           int index) {
         return getKeysFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getKeysOrBuilder(
           int index) {
         if (keysBuilder_ == null) {
@@ -3530,6 +5381,13 @@ public final class BatchProto {
           return keysBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
            getKeysOrBuilderList() {
         if (keysBuilder_ != null) {
@@ -3538,15 +5396,36 @@ public final class BatchProto {
           return java.util.Collections.unmodifiableList(keys_);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addKeysBuilder() {
         return getKeysFieldBuilder().addBuilder(
             com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addKeysBuilder(
           int index) {
         return getKeysFieldBuilder().addBuilder(
             index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column keys = 6;</code>
+       *
+       * <pre>
+       **变更后的主键，可能是复合主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder> 
            getKeysBuilderList() {
         return getKeysFieldBuilder().getBuilderList();
@@ -3565,7 +5444,7 @@ public final class BatchProto {
         }
         return keysBuilder_;
       }
-      
+
       // repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;
       private java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> columns_ =
         java.util.Collections.emptyList();
@@ -3575,10 +5454,17 @@ public final class BatchProto {
           bitField0_ |= 0x00000040;
          }
       }
-      
+
       private com.google.protobuf.RepeatedFieldBuilder<
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder, com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> columnsBuilder_;
-      
+
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> getColumnsList() {
         if (columnsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(columns_);
@@ -3586,6 +5472,13 @@ public final class BatchProto {
           return columnsBuilder_.getMessageList();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public int getColumnsCount() {
         if (columnsBuilder_ == null) {
           return columns_.size();
@@ -3593,6 +5486,13 @@ public final class BatchProto {
           return columnsBuilder_.getCount();
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getColumns(int index) {
         if (columnsBuilder_ == null) {
           return columns_.get(index);
@@ -3600,6 +5500,13 @@ public final class BatchProto {
           return columnsBuilder_.getMessage(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder setColumns(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (columnsBuilder_ == null) {
@@ -3614,6 +5521,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder setColumns(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (columnsBuilder_ == null) {
@@ -3625,6 +5539,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder addColumns(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (columnsBuilder_ == null) {
           if (value == null) {
@@ -3638,6 +5559,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder addColumns(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column value) {
         if (columnsBuilder_ == null) {
@@ -3652,6 +5580,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder addColumns(
           com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (columnsBuilder_ == null) {
@@ -3663,6 +5598,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder addColumns(
           int index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder builderForValue) {
         if (columnsBuilder_ == null) {
@@ -3674,6 +5616,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder addAllColumns(
           java.lang.Iterable<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column> values) {
         if (columnsBuilder_ == null) {
@@ -3685,6 +5634,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder clearColumns() {
         if (columnsBuilder_ == null) {
           columns_ = java.util.Collections.emptyList();
@@ -3695,6 +5651,13 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public Builder removeColumns(int index) {
         if (columnsBuilder_ == null) {
           ensureColumnsIsMutable();
@@ -3705,10 +5668,24 @@ public final class BatchProto {
         }
         return this;
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder getColumnsBuilder(
           int index) {
         return getColumnsFieldBuilder().getBuilder(index);
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder getColumnsOrBuilder(
           int index) {
         if (columnsBuilder_ == null) {
@@ -3716,6 +5693,13 @@ public final class BatchProto {
           return columnsBuilder_.getMessageOrBuilder(index);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public java.util.List<? extends com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder> 
            getColumnsOrBuilderList() {
         if (columnsBuilder_ != null) {
@@ -3724,15 +5708,36 @@ public final class BatchProto {
           return java.util.Collections.unmodifiableList(columns_);
         }
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addColumnsBuilder() {
         return getColumnsFieldBuilder().addBuilder(
             com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder addColumnsBuilder(
           int index) {
         return getColumnsFieldBuilder().addBuilder(
             index, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance());
       }
+      /**
+       * <code>repeated .com.alibaba.otter.node.etl.model.protobuf.Column columns = 7;</code>
+       *
+       * <pre>
+       **变更数据的每列变更信息,不包含主键*
+       * </pre>
+       */
       public java.util.List<com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder> 
            getColumnsBuilderList() {
         return getColumnsFieldBuilder().getBuilderList();
@@ -3751,65 +5756,164 @@ public final class BatchProto {
         }
         return columnsBuilder_;
       }
-      
+
       // optional int64 executeTime = 8;
       private long executeTime_ ;
+      /**
+       * <code>optional int64 executeTime = 8;</code>
+       *
+       * <pre>
+       **变更数据的业务时间*
+       * </pre>
+       */
       public boolean hasExecuteTime() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
+      /**
+       * <code>optional int64 executeTime = 8;</code>
+       *
+       * <pre>
+       **变更数据的业务时间*
+       * </pre>
+       */
       public long getExecuteTime() {
         return executeTime_;
       }
+      /**
+       * <code>optional int64 executeTime = 8;</code>
+       *
+       * <pre>
+       **变更数据的业务时间*
+       * </pre>
+       */
       public Builder setExecuteTime(long value) {
         bitField0_ |= 0x00000080;
         executeTime_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 executeTime = 8;</code>
+       *
+       * <pre>
+       **变更数据的业务时间*
+       * </pre>
+       */
       public Builder clearExecuteTime() {
         bitField0_ = (bitField0_ & ~0x00000080);
         executeTime_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 pairId = 9;
       private long pairId_ ;
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public boolean hasPairId() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public long getPairId() {
         return pairId_;
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public Builder setPairId(long value) {
         bitField0_ |= 0x00000100;
         pairId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public Builder clearPairId() {
         bitField0_ = (bitField0_ & ~0x00000100);
         pairId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional string syncMode = 10;
       private java.lang.Object syncMode_ = "";
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
       public boolean hasSyncMode() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
-      public String getSyncMode() {
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
+      public java.lang.String getSyncMode() {
         java.lang.Object ref = syncMode_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           syncMode_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSyncMode(String value) {
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSyncModeBytes() {
+        java.lang.Object ref = syncMode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          syncMode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
+      public Builder setSyncMode(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3818,34 +5922,96 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
       public Builder clearSyncMode() {
         bitField0_ = (bitField0_ & ~0x00000200);
         syncMode_ = getDefaultInstance().getSyncMode();
         onChanged();
         return this;
       }
-      void setSyncMode(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000200;
+      /**
+       * <code>optional string syncMode = 10;</code>
+       *
+       * <pre>
+       **同步模式(R/F)*
+       * </pre>
+       */
+      public Builder setSyncModeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
         syncMode_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string syncConsistency = 11;
       private java.lang.Object syncConsistency_ = "";
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
       public boolean hasSyncConsistency() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
-      public String getSyncConsistency() {
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
+      public java.lang.String getSyncConsistency() {
         java.lang.Object ref = syncConsistency_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           syncConsistency_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSyncConsistency(String value) {
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSyncConsistencyBytes() {
+        java.lang.Object ref = syncConsistency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          syncConsistency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
+      public Builder setSyncConsistency(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3854,76 +6020,194 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
       public Builder clearSyncConsistency() {
         bitField0_ = (bitField0_ & ~0x00000400);
         syncConsistency_ = getDefaultInstance().getSyncConsistency();
         onChanged();
         return this;
       }
-      void setSyncConsistency(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000400;
+      /**
+       * <code>optional string syncConsistency = 11;</code>
+       *
+       * <pre>
+       **同步一致性(B/S/M) *
+       * </pre>
+       */
+      public Builder setSyncConsistencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
         syncConsistency_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional int64 size = 12;
       private long size_ ;
+      /**
+       * <code>optional int64 size = 12;</code>
+       *
+       * <pre>
+       ** eventsize *
+       * </pre>
+       */
       public boolean hasSize() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
+      /**
+       * <code>optional int64 size = 12;</code>
+       *
+       * <pre>
+       ** eventsize *
+       * </pre>
+       */
       public long getSize() {
         return size_;
       }
+      /**
+       * <code>optional int64 size = 12;</code>
+       *
+       * <pre>
+       ** eventsize *
+       * </pre>
+       */
       public Builder setSize(long value) {
         bitField0_ |= 0x00000800;
         size_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 size = 12;</code>
+       *
+       * <pre>
+       ** eventsize *
+       * </pre>
+       */
       public Builder clearSize() {
         bitField0_ = (bitField0_ & ~0x00000800);
         size_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional bool remedy = 13;
       private boolean remedy_ ;
+      /**
+       * <code>optional bool remedy = 13;</code>
+       *
+       * <pre>
+       ** isRemedy *
+       * </pre>
+       */
       public boolean hasRemedy() {
         return ((bitField0_ & 0x00001000) == 0x00001000);
       }
+      /**
+       * <code>optional bool remedy = 13;</code>
+       *
+       * <pre>
+       ** isRemedy *
+       * </pre>
+       */
       public boolean getRemedy() {
         return remedy_;
       }
+      /**
+       * <code>optional bool remedy = 13;</code>
+       *
+       * <pre>
+       ** isRemedy *
+       * </pre>
+       */
       public Builder setRemedy(boolean value) {
         bitField0_ |= 0x00001000;
         remedy_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool remedy = 13;</code>
+       *
+       * <pre>
+       ** isRemedy *
+       * </pre>
+       */
       public Builder clearRemedy() {
         bitField0_ = (bitField0_ & ~0x00001000);
         remedy_ = false;
         onChanged();
         return this;
       }
-      
+
       // optional string sql = 14;
       private java.lang.Object sql_ = "";
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
       public boolean hasSql() {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
-      public String getSql() {
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public java.lang.String getSql() {
         java.lang.Object ref = sql_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           sql_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setSql(String value) {
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSqlBytes() {
+        java.lang.Object ref = sql_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sql_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public Builder setSql(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3932,34 +6216,96 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
       public Builder clearSql() {
         bitField0_ = (bitField0_ & ~0x00002000);
         sql_ = getDefaultInstance().getSql();
         onChanged();
         return this;
       }
-      void setSql(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00002000;
+      /**
+       * <code>optional string sql = 14;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public Builder setSqlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
         sql_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string ddlSchemaName = 15;
       private java.lang.Object ddlSchemaName_ = "";
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
       public boolean hasDdlSchemaName() {
         return ((bitField0_ & 0x00004000) == 0x00004000);
       }
-      public String getDdlSchemaName() {
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
+      public java.lang.String getDdlSchemaName() {
         java.lang.Object ref = ddlSchemaName_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           ddlSchemaName_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setDdlSchemaName(String value) {
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getDdlSchemaNameBytes() {
+        java.lang.Object ref = ddlSchemaName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ddlSchemaName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
+      public Builder setDdlSchemaName(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3968,34 +6314,96 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
       public Builder clearDdlSchemaName() {
         bitField0_ = (bitField0_ & ~0x00004000);
         ddlSchemaName_ = getDefaultInstance().getDdlSchemaName();
         onChanged();
         return this;
       }
-      void setDdlSchemaName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00004000;
+      /**
+       * <code>optional string ddlSchemaName = 15;</code>
+       *
+       * <pre>
+       ** current ddl schemaName *
+       * </pre>
+       */
+      public Builder setDdlSchemaNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
         ddlSchemaName_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string hint = 16;
       private java.lang.Object hint_ = "";
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
       public boolean hasHint() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
-      public String getHint() {
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public java.lang.String getHint() {
         java.lang.Object ref = hint_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           hint_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setHint(String value) {
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getHintBytes() {
+        java.lang.Object ref = hint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public Builder setHint(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4004,572 +6412,292 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
       public Builder clearHint() {
         bitField0_ = (bitField0_ & ~0x00008000);
         hint_ = getDefaultInstance().getHint();
         onChanged();
         return this;
       }
-      void setHint(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00008000;
+      /**
+       * <code>optional string hint = 16;</code>
+       *
+       * <pre>
+       ** dml/ddl sql *
+       * </pre>
+       */
+      public Builder setHintBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
         hint_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional bool withoutSchema = 17;
       private boolean withoutSchema_ ;
+      /**
+       * <code>optional bool withoutSchema = 17;</code>
+       *
+       * <pre>
+       ** without schema *
+       * </pre>
+       */
       public boolean hasWithoutSchema() {
         return ((bitField0_ & 0x00010000) == 0x00010000);
       }
+      /**
+       * <code>optional bool withoutSchema = 17;</code>
+       *
+       * <pre>
+       ** without schema *
+       * </pre>
+       */
       public boolean getWithoutSchema() {
         return withoutSchema_;
       }
+      /**
+       * <code>optional bool withoutSchema = 17;</code>
+       *
+       * <pre>
+       ** without schema *
+       * </pre>
+       */
       public Builder setWithoutSchema(boolean value) {
         bitField0_ |= 0x00010000;
         withoutSchema_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional bool withoutSchema = 17;</code>
+       *
+       * <pre>
+       ** without schema *
+       * </pre>
+       */
       public Builder clearWithoutSchema() {
         bitField0_ = (bitField0_ & ~0x00010000);
         withoutSchema_ = false;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.RowData)
     }
-    
+
     static {
       defaultInstance = new RowData(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.RowData)
   }
-  
+
   public interface ColumnOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
-    
+
     // optional int32 index = 1;
+    /**
+     * <code>optional int32 index = 1;</code>
+     *
+     * <pre>
+     **列下标*
+     * </pre>
+     */
     boolean hasIndex();
+    /**
+     * <code>optional int32 index = 1;</code>
+     *
+     * <pre>
+     **列下标*
+     * </pre>
+     */
     int getIndex();
-    
+
     // optional string name = 2;
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
     boolean hasName();
-    String getName();
-    
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
+    java.lang.String getName();
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
     // optional string value = 3;
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
     boolean hasValue();
-    String getValue();
-    
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
+    java.lang.String getValue();
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
     // optional bool isPrimaryKey = 4;
+    /**
+     * <code>optional bool isPrimaryKey = 4;</code>
+     *
+     * <pre>
+     **当前列是否是主键*
+     * </pre>
+     */
     boolean hasIsPrimaryKey();
+    /**
+     * <code>optional bool isPrimaryKey = 4;</code>
+     *
+     * <pre>
+     **当前列是否是主键*
+     * </pre>
+     */
     boolean getIsPrimaryKey();
-    
+
     // optional bool isNull = 5;
+    /**
+     * <code>optional bool isNull = 5;</code>
+     *
+     * <pre>
+     **当前列是否可以为空*
+     * </pre>
+     */
     boolean hasIsNull();
+    /**
+     * <code>optional bool isNull = 5;</code>
+     *
+     * <pre>
+     **当前列是否可以为空*
+     * </pre>
+     */
     boolean getIsNull();
-    
+
     // optional int32 type = 6;
+    /**
+     * <code>optional int32 type = 6;</code>
+     *
+     * <pre>
+     **当前列的数据类型*
+     * </pre>
+     */
     boolean hasType();
+    /**
+     * <code>optional int32 type = 6;</code>
+     *
+     * <pre>
+     **当前列的数据类型*
+     * </pre>
+     */
     int getType();
-    
+
     // optional bool isUpdate = 7;
+    /**
+     * <code>optional bool isUpdate = 7;</code>
+     *
+     * <pre>
+     **当前列是否发生真实变更*
+     * </pre>
+     */
     boolean hasIsUpdate();
+    /**
+     * <code>optional bool isUpdate = 7;</code>
+     *
+     * <pre>
+     **当前列是否发生真实变更*
+     * </pre>
+     */
     boolean getIsUpdate();
   }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.Column}
+   */
   public static final class Column extends
       com.google.protobuf.GeneratedMessage
       implements ColumnOrBuilder {
     // Use Column.newBuilder() to construct.
-    private Column(Builder builder) {
+    private Column(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
+      this.unknownFields = builder.getUnknownFields();
     }
-    private Column(boolean noInit) {}
-    
+    private Column(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
     private static final Column defaultInstance;
     public static Column getDefaultInstance() {
       return defaultInstance;
     }
-    
+
     public Column getDefaultInstanceForType() {
       return defaultInstance;
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // optional int32 index = 1;
-    public static final int INDEX_FIELD_NUMBER = 1;
-    private int index_;
-    public boolean hasIndex() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public int getIndex() {
-      return index_;
-    }
-    
-    // optional string name = 2;
-    public static final int NAME_FIELD_NUMBER = 2;
-    private java.lang.Object name_;
-    public boolean hasName() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          name_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // optional string value = 3;
-    public static final int VALUE_FIELD_NUMBER = 3;
-    private java.lang.Object value_;
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    public String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          value_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // optional bool isPrimaryKey = 4;
-    public static final int ISPRIMARYKEY_FIELD_NUMBER = 4;
-    private boolean isPrimaryKey_;
-    public boolean hasIsPrimaryKey() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    public boolean getIsPrimaryKey() {
-      return isPrimaryKey_;
-    }
-    
-    // optional bool isNull = 5;
-    public static final int ISNULL_FIELD_NUMBER = 5;
-    private boolean isNull_;
-    public boolean hasIsNull() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    public boolean getIsNull() {
-      return isNull_;
-    }
-    
-    // optional int32 type = 6;
-    public static final int TYPE_FIELD_NUMBER = 6;
-    private int type_;
-    public boolean hasType() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    public int getType() {
-      return type_;
-    }
-    
-    // optional bool isUpdate = 7;
-    public static final int ISUPDATE_FIELD_NUMBER = 7;
-    private boolean isUpdate_;
-    public boolean hasIsUpdate() {
-      return ((bitField0_ & 0x00000040) == 0x00000040);
-    }
-    public boolean getIsUpdate() {
-      return isUpdate_;
-    }
-    
-    private void initFields() {
-      index_ = 0;
-      name_ = "";
-      value_ = "";
-      isPrimaryKey_ = false;
-      isNull_ = false;
-      type_ = 0;
-      isUpdate_ = false;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, index_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getNameBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getValueBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeBool(4, isPrimaryKey_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeBool(5, isNull_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt32(6, type_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeBool(7, isUpdate_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, index_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNameBytes());
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getValueBytes());
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isPrimaryKey_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, isNull_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(6, type_);
-      }
-      if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isUpdate_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
     }
-    
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
+    private Column(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_fieldAccessorTable;
-      }
-      
-      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        index_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
-        isPrimaryKey_ = false;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        isNull_ = false;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        type_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        isUpdate_ = false;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDescriptor();
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getDefaultInstanceForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance();
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column build() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column buildPartial() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.index_ = index_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.name_ = name_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.value_ = value_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.isPrimaryKey_ = isPrimaryKey_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.isNull_ = isNull_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.type_ = type_;
-        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-          to_bitField0_ |= 0x00000040;
-        }
-        result.isUpdate_ = isUpdate_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column) {
-          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column other) {
-        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance()) return this;
-        if (other.hasIndex()) {
-          setIndex(other.getIndex());
-        }
-        if (other.hasName()) {
-          setName(other.getName());
-        }
-        if (other.hasValue()) {
-          setValue(other.getValue());
-        }
-        if (other.hasIsPrimaryKey()) {
-          setIsPrimaryKey(other.getIsPrimaryKey());
-        }
-        if (other.hasIsNull()) {
-          setIsNull(other.getIsNull());
-        }
-        if (other.hasType()) {
-          setType(other.getType());
-        }
-        if (other.hasIsUpdate()) {
-          setIsUpdate(other.getIsUpdate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -4610,584 +6738,456 @@ public final class BatchProto {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
-      private int bitField0_;
-      
-      // optional int32 index = 1;
-      private int index_ ;
-      public boolean hasIndex() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public int getIndex() {
-        return index_;
-      }
-      public Builder setIndex(int value) {
-        bitField0_ |= 0x00000001;
-        index_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIndex() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        index_ = 0;
-        onChanged();
-        return this;
-      }
-      
-      // optional string name = 2;
-      private java.lang.Object name_ = "";
-      public boolean hasName() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setName(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      void setName(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        name_ = value;
-        onChanged();
-      }
-      
-      // optional string value = 3;
-      private java.lang.Object value_ = "";
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      public String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setValue(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      void setValue(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
-        value_ = value;
-        onChanged();
-      }
-      
-      // optional bool isPrimaryKey = 4;
-      private boolean isPrimaryKey_ ;
-      public boolean hasIsPrimaryKey() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      public boolean getIsPrimaryKey() {
-        return isPrimaryKey_;
-      }
-      public Builder setIsPrimaryKey(boolean value) {
-        bitField0_ |= 0x00000008;
-        isPrimaryKey_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsPrimaryKey() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        isPrimaryKey_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional bool isNull = 5;
-      private boolean isNull_ ;
-      public boolean hasIsNull() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      public boolean getIsNull() {
-        return isNull_;
-      }
-      public Builder setIsNull(boolean value) {
-        bitField0_ |= 0x00000010;
-        isNull_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsNull() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        isNull_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional int32 type = 6;
-      private int type_ ;
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      public int getType() {
-        return type_;
-      }
-      public Builder setType(int value) {
-        bitField0_ |= 0x00000020;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        type_ = 0;
-        onChanged();
-        return this;
-      }
-      
-      // optional bool isUpdate = 7;
-      private boolean isUpdate_ ;
-      public boolean hasIsUpdate() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
-      }
-      public boolean getIsUpdate() {
-        return isUpdate_;
-      }
-      public Builder setIsUpdate(boolean value) {
-        bitField0_ |= 0x00000040;
-        isUpdate_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsUpdate() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        isUpdate_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.Column)
     }
-    
-    static {
-      defaultInstance = new Column(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.Column)
-  }
-  
-  public interface FileDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // optional string eventType = 1;
-    boolean hasEventType();
-    String getEventType();
-    
-    // optional string namespace = 2;
-    boolean hasNamespace();
-    String getNamespace();
-    
-    // optional string path = 3;
-    boolean hasPath();
-    String getPath();
-    
-    // optional int64 lastModifiedTime = 4;
-    boolean hasLastModifiedTime();
-    long getLastModifiedTime();
-    
-    // optional int64 size = 5;
-    boolean hasSize();
-    long getSize();
-    
-    // optional int64 tableId = 6;
-    boolean hasTableId();
-    long getTableId();
-    
-    // optional int64 pairId = 9;
-    boolean hasPairId();
-    long getPairId();
-  }
-  public static final class FileData extends
-      com.google.protobuf.GeneratedMessage
-      implements FileDataOrBuilder {
-    // Use FileData.newBuilder() to construct.
-    private FileData(Builder builder) {
-      super(builder);
-    }
-    private FileData(boolean noInit) {}
-    
-    private static final FileData defaultInstance;
-    public static FileData getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public FileData getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor;
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor;
     }
-    
+
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable;
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder.class);
     }
-    
+
+    public static com.google.protobuf.Parser<Column> PARSER =
+        new com.google.protobuf.AbstractParser<Column>() {
+      public Column parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Column(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Column> getParserForType() {
+      return PARSER;
+    }
+
     private int bitField0_;
-    // optional string eventType = 1;
-    public static final int EVENTTYPE_FIELD_NUMBER = 1;
-    private java.lang.Object eventType_;
-    public boolean hasEventType() {
+    // optional int32 index = 1;
+    public static final int INDEX_FIELD_NUMBER = 1;
+    private int index_;
+    /**
+     * <code>optional int32 index = 1;</code>
+     *
+     * <pre>
+     **列下标*
+     * </pre>
+     */
+    public boolean hasIndex() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getEventType() {
-      java.lang.Object ref = eventType_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          eventType_ = s;
-        }
-        return s;
-      }
+    /**
+     * <code>optional int32 index = 1;</code>
+     *
+     * <pre>
+     **列下标*
+     * </pre>
+     */
+    public int getIndex() {
+      return index_;
     }
-    private com.google.protobuf.ByteString getEventTypeBytes() {
-      java.lang.Object ref = eventType_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        eventType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // optional string namespace = 2;
-    public static final int NAMESPACE_FIELD_NUMBER = 2;
-    private java.lang.Object namespace_;
-    public boolean hasNamespace() {
+
+    // optional string name = 2;
+    public static final int NAME_FIELD_NUMBER = 2;
+    private java.lang.Object name_;
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
+    public boolean hasName() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public String getNamespace() {
-      java.lang.Object ref = namespace_;
-      if (ref instanceof String) {
-        return (String) ref;
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          namespace_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNamespaceBytes() {
-      java.lang.Object ref = namespace_;
-      if (ref instanceof String) {
+    /**
+     * <code>optional string name = 2;</code>
+     *
+     * <pre>
+     **列名*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        namespace_ = b;
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional string path = 3;
-    public static final int PATH_FIELD_NUMBER = 3;
-    private java.lang.Object path_;
-    public boolean hasPath() {
+
+    // optional string value = 3;
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private java.lang.Object value_;
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
+    public boolean hasValue() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public String getPath() {
-      java.lang.Object ref = path_;
-      if (ref instanceof String) {
-        return (String) ref;
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          path_ = s;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          value_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPathBytes() {
-      java.lang.Object ref = path_;
-      if (ref instanceof String) {
+    /**
+     * <code>optional string value = 3;</code>
+     *
+     * <pre>
+     **列值,timestamp,Datetime是一个long型的数字*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        path_ = b;
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
-    
-    // optional int64 lastModifiedTime = 4;
-    public static final int LASTMODIFIEDTIME_FIELD_NUMBER = 4;
-    private long lastModifiedTime_;
-    public boolean hasLastModifiedTime() {
+
+    // optional bool isPrimaryKey = 4;
+    public static final int ISPRIMARYKEY_FIELD_NUMBER = 4;
+    private boolean isPrimaryKey_;
+    /**
+     * <code>optional bool isPrimaryKey = 4;</code>
+     *
+     * <pre>
+     **当前列是否是主键*
+     * </pre>
+     */
+    public boolean hasIsPrimaryKey() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public long getLastModifiedTime() {
-      return lastModifiedTime_;
+    /**
+     * <code>optional bool isPrimaryKey = 4;</code>
+     *
+     * <pre>
+     **当前列是否是主键*
+     * </pre>
+     */
+    public boolean getIsPrimaryKey() {
+      return isPrimaryKey_;
     }
-    
-    // optional int64 size = 5;
-    public static final int SIZE_FIELD_NUMBER = 5;
-    private long size_;
-    public boolean hasSize() {
+
+    // optional bool isNull = 5;
+    public static final int ISNULL_FIELD_NUMBER = 5;
+    private boolean isNull_;
+    /**
+     * <code>optional bool isNull = 5;</code>
+     *
+     * <pre>
+     **当前列是否可以为空*
+     * </pre>
+     */
+    public boolean hasIsNull() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
-    public long getSize() {
-      return size_;
+    /**
+     * <code>optional bool isNull = 5;</code>
+     *
+     * <pre>
+     **当前列是否可以为空*
+     * </pre>
+     */
+    public boolean getIsNull() {
+      return isNull_;
     }
-    
-    // optional int64 tableId = 6;
-    public static final int TABLEID_FIELD_NUMBER = 6;
-    private long tableId_;
-    public boolean hasTableId() {
+
+    // optional int32 type = 6;
+    public static final int TYPE_FIELD_NUMBER = 6;
+    private int type_;
+    /**
+     * <code>optional int32 type = 6;</code>
+     *
+     * <pre>
+     **当前列的数据类型*
+     * </pre>
+     */
+    public boolean hasType() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
-    public long getTableId() {
-      return tableId_;
+    /**
+     * <code>optional int32 type = 6;</code>
+     *
+     * <pre>
+     **当前列的数据类型*
+     * </pre>
+     */
+    public int getType() {
+      return type_;
     }
-    
-    // optional int64 pairId = 9;
-    public static final int PAIRID_FIELD_NUMBER = 9;
-    private long pairId_;
-    public boolean hasPairId() {
+
+    // optional bool isUpdate = 7;
+    public static final int ISUPDATE_FIELD_NUMBER = 7;
+    private boolean isUpdate_;
+    /**
+     * <code>optional bool isUpdate = 7;</code>
+     *
+     * <pre>
+     **当前列是否发生真实变更*
+     * </pre>
+     */
+    public boolean hasIsUpdate() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
-    public long getPairId() {
-      return pairId_;
+    /**
+     * <code>optional bool isUpdate = 7;</code>
+     *
+     * <pre>
+     **当前列是否发生真实变更*
+     * </pre>
+     */
+    public boolean getIsUpdate() {
+      return isUpdate_;
     }
-    
+
     private void initFields() {
-      eventType_ = "";
-      namespace_ = "";
-      path_ = "";
-      lastModifiedTime_ = 0L;
-      size_ = 0L;
-      tableId_ = 0L;
-      pairId_ = 0L;
+      index_ = 0;
+      name_ = "";
+      value_ = "";
+      isPrimaryKey_ = false;
+      isNull_ = false;
+      type_ = 0;
+      isUpdate_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
-      
+
       memoizedIsInitialized = 1;
       return true;
     }
-    
+
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getEventTypeBytes());
+        output.writeInt32(1, index_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getNamespaceBytes());
+        output.writeBytes(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBytes(3, getPathBytes());
+        output.writeBytes(3, getValueBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeInt64(4, lastModifiedTime_);
+        output.writeBool(4, isPrimaryKey_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt64(5, size_);
+        output.writeBool(5, isNull_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeInt64(6, tableId_);
+        output.writeInt32(6, type_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        output.writeInt64(9, pairId_);
+        output.writeBool(7, isUpdate_);
       }
       getUnknownFields().writeTo(output);
     }
-    
+
     private int memoizedSerializedSize = -1;
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
       if (size != -1) return size;
-    
+
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getEventTypeBytes());
+          .computeInt32Size(1, index_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getNamespaceBytes());
+          .computeBytesSize(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, getPathBytes());
+          .computeBytesSize(3, getValueBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(4, lastModifiedTime_);
+          .computeBoolSize(4, isPrimaryKey_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(5, size_);
+          .computeBoolSize(5, isNull_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(6, tableId_);
+          .computeInt32Size(6, type_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(9, pairId_);
+          .computeBoolSize(7, isUpdate_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
     }
-    
+
     private static final long serialVersionUID = 0L;
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
       return super.writeReplace();
     }
-    
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(byte[] data)
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
+      return PARSER.parseFrom(data);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(java.io.InputStream input)
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseDelimitedFrom(java.io.InputStream input)
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseDelimitedFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
+      return PARSER.parseFrom(input);
     }
-    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
+      return PARSER.parseFrom(input, extensionRegistry);
     }
-    
+
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData prototype) {
+    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
-    
+
     @java.lang.Override
     protected Builder newBuilderForType(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.Column}
+     */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder {
+       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.ColumnOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor;
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor;
       }
-      
+
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable;
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder.class);
       }
-      
-      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.newBuilder()
+
+      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-      
-      private Builder(BuilderParent parent) {
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5198,154 +7198,799 @@ public final class BatchProto {
       private static Builder create() {
         return new Builder();
       }
-      
+
       public Builder clear() {
         super.clear();
-        eventType_ = "";
+        index_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        namespace_ = "";
+        name_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        path_ = "";
+        value_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        lastModifiedTime_ = 0L;
+        isPrimaryKey_ = false;
         bitField0_ = (bitField0_ & ~0x00000008);
-        size_ = 0L;
+        isNull_ = false;
         bitField0_ = (bitField0_ & ~0x00000010);
-        tableId_ = 0L;
+        type_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        pairId_ = 0L;
+        isUpdate_ = false;
         bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
-      
+
       public Builder clone() {
         return create().mergeFrom(buildPartial());
       }
-      
+
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDescriptor();
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor;
       }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData getDefaultInstanceForType() {
-        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance();
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column getDefaultInstanceForType() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance();
       }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData build() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData result = buildPartial();
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column build() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
-      
-      private com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData buildPartial() {
-        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData(this);
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column buildPartial() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.eventType_ = eventType_;
+        result.index_ = index_;
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.namespace_ = namespace_;
+        result.name_ = name_;
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.path_ = path_;
+        result.value_ = value_;
         if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.lastModifiedTime_ = lastModifiedTime_;
+        result.isPrimaryKey_ = isPrimaryKey_;
         if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
           to_bitField0_ |= 0x00000010;
         }
-        result.size_ = size_;
+        result.isNull_ = isNull_;
         if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
           to_bitField0_ |= 0x00000020;
         }
-        result.tableId_ = tableId_;
+        result.type_ = type_;
         if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
           to_bitField0_ |= 0x00000040;
         }
-        result.pairId_ = pairId_;
+        result.isUpdate_ = isUpdate_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
-      
+
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData) {
-          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData)other);
+        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column) {
+          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
-      
-      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData other) {
-        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance()) return this;
-        if (other.hasEventType()) {
-          setEventType(other.getEventType());
+
+      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column other) {
+        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.getDefaultInstance()) return this;
+        if (other.hasIndex()) {
+          setIndex(other.getIndex());
         }
-        if (other.hasNamespace()) {
-          setNamespace(other.getNamespace());
+        if (other.hasName()) {
+          bitField0_ |= 0x00000002;
+          name_ = other.name_;
+          onChanged();
         }
-        if (other.hasPath()) {
-          setPath(other.getPath());
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000004;
+          value_ = other.value_;
+          onChanged();
         }
-        if (other.hasLastModifiedTime()) {
-          setLastModifiedTime(other.getLastModifiedTime());
+        if (other.hasIsPrimaryKey()) {
+          setIsPrimaryKey(other.getIsPrimaryKey());
         }
-        if (other.hasSize()) {
-          setSize(other.getSize());
+        if (other.hasIsNull()) {
+          setIsNull(other.getIsNull());
         }
-        if (other.hasTableId()) {
-          setTableId(other.getTableId());
+        if (other.hasType()) {
+          setType(other.getType());
         }
-        if (other.hasPairId()) {
-          setPairId(other.getPairId());
+        if (other.hasIsUpdate()) {
+          setIsUpdate(other.getIsUpdate());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
-      
+
       public final boolean isInitialized() {
         return true;
       }
-      
+
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional int32 index = 1;
+      private int index_ ;
+      /**
+       * <code>optional int32 index = 1;</code>
+       *
+       * <pre>
+       **列下标*
+       * </pre>
+       */
+      public boolean hasIndex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 index = 1;</code>
+       *
+       * <pre>
+       **列下标*
+       * </pre>
+       */
+      public int getIndex() {
+        return index_;
+      }
+      /**
+       * <code>optional int32 index = 1;</code>
+       *
+       * <pre>
+       **列下标*
+       * </pre>
+       */
+      public Builder setIndex(int value) {
+        bitField0_ |= 0x00000001;
+        index_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 index = 1;</code>
+       *
+       * <pre>
+       **列下标*
+       * </pre>
+       */
+      public Builder clearIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        index_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional string name = 2;
+      private java.lang.Object name_ = "";
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string name = 2;</code>
+       *
+       * <pre>
+       **列名*
+       * </pre>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string value = 3;
+      private java.lang.Object value_ = "";
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string value = 3;</code>
+       *
+       * <pre>
+       **列值,timestamp,Datetime是一个long型的数字*
+       * </pre>
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional bool isPrimaryKey = 4;
+      private boolean isPrimaryKey_ ;
+      /**
+       * <code>optional bool isPrimaryKey = 4;</code>
+       *
+       * <pre>
+       **当前列是否是主键*
+       * </pre>
+       */
+      public boolean hasIsPrimaryKey() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool isPrimaryKey = 4;</code>
+       *
+       * <pre>
+       **当前列是否是主键*
+       * </pre>
+       */
+      public boolean getIsPrimaryKey() {
+        return isPrimaryKey_;
+      }
+      /**
+       * <code>optional bool isPrimaryKey = 4;</code>
+       *
+       * <pre>
+       **当前列是否是主键*
+       * </pre>
+       */
+      public Builder setIsPrimaryKey(boolean value) {
+        bitField0_ |= 0x00000008;
+        isPrimaryKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isPrimaryKey = 4;</code>
+       *
+       * <pre>
+       **当前列是否是主键*
+       * </pre>
+       */
+      public Builder clearIsPrimaryKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isPrimaryKey_ = false;
+        onChanged();
+        return this;
+      }
+
+      // optional bool isNull = 5;
+      private boolean isNull_ ;
+      /**
+       * <code>optional bool isNull = 5;</code>
+       *
+       * <pre>
+       **当前列是否可以为空*
+       * </pre>
+       */
+      public boolean hasIsNull() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool isNull = 5;</code>
+       *
+       * <pre>
+       **当前列是否可以为空*
+       * </pre>
+       */
+      public boolean getIsNull() {
+        return isNull_;
+      }
+      /**
+       * <code>optional bool isNull = 5;</code>
+       *
+       * <pre>
+       **当前列是否可以为空*
+       * </pre>
+       */
+      public Builder setIsNull(boolean value) {
+        bitField0_ |= 0x00000010;
+        isNull_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isNull = 5;</code>
+       *
+       * <pre>
+       **当前列是否可以为空*
+       * </pre>
+       */
+      public Builder clearIsNull() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isNull_ = false;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 type = 6;
+      private int type_ ;
+      /**
+       * <code>optional int32 type = 6;</code>
+       *
+       * <pre>
+       **当前列的数据类型*
+       * </pre>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 type = 6;</code>
+       *
+       * <pre>
+       **当前列的数据类型*
+       * </pre>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>optional int32 type = 6;</code>
+       *
+       * <pre>
+       **当前列的数据类型*
+       * </pre>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000020;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 type = 6;</code>
+       *
+       * <pre>
+       **当前列的数据类型*
+       * </pre>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional bool isUpdate = 7;
+      private boolean isUpdate_ ;
+      /**
+       * <code>optional bool isUpdate = 7;</code>
+       *
+       * <pre>
+       **当前列是否发生真实变更*
+       * </pre>
+       */
+      public boolean hasIsUpdate() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool isUpdate = 7;</code>
+       *
+       * <pre>
+       **当前列是否发生真实变更*
+       * </pre>
+       */
+      public boolean getIsUpdate() {
+        return isUpdate_;
+      }
+      /**
+       * <code>optional bool isUpdate = 7;</code>
+       *
+       * <pre>
+       **当前列是否发生真实变更*
+       * </pre>
+       */
+      public Builder setIsUpdate(boolean value) {
+        bitField0_ |= 0x00000040;
+        isUpdate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isUpdate = 7;</code>
+       *
+       * <pre>
+       **当前列是否发生真实变更*
+       * </pre>
+       */
+      public Builder clearIsUpdate() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isUpdate_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.Column)
+    }
+
+    static {
+      defaultInstance = new Column(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.Column)
+  }
+
+  public interface FileDataOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional string eventType = 1;
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    boolean hasEventType();
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    java.lang.String getEventType();
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getEventTypeBytes();
+
+    // optional string namespace = 2;
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    boolean hasNamespace();
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    java.lang.String getNamespace();
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getNamespaceBytes();
+
+    // optional string path = 3;
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    boolean hasPath();
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    java.lang.String getPath();
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getPathBytes();
+
+    // optional int64 lastModifiedTime = 4;
+    /**
+     * <code>optional int64 lastModifiedTime = 4;</code>
+     *
+     * <pre>
+     **文件最后一次修改时间*
+     * </pre>
+     */
+    boolean hasLastModifiedTime();
+    /**
+     * <code>optional int64 lastModifiedTime = 4;</code>
+     *
+     * <pre>
+     **文件最后一次修改时间*
+     * </pre>
+     */
+    long getLastModifiedTime();
+
+    // optional int64 size = 5;
+    /**
+     * <code>optional int64 size = 5;</code>
+     *
+     * <pre>
+     **文件的大小*
+     * </pre>
+     */
+    boolean hasSize();
+    /**
+     * <code>optional int64 size = 5;</code>
+     *
+     * <pre>
+     **文件的大小*
+     * </pre>
+     */
+    long getSize();
+
+    // optional int64 tableId = 6;
+    /**
+     * <code>optional int64 tableId = 6;</code>
+     */
+    boolean hasTableId();
+    /**
+     * <code>optional int64 tableId = 6;</code>
+     */
+    long getTableId();
+
+    // optional int64 pairId = 9;
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
+    boolean hasPairId();
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
+    long getPairId();
+  }
+  /**
+   * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.FileData}
+   *
+   * <pre>
+   **文件对象*
+   * </pre>
+   */
+  public static final class FileData extends
+      com.google.protobuf.GeneratedMessage
+      implements FileDataOrBuilder {
+    // Use FileData.newBuilder() to construct.
+    private FileData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private FileData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final FileData defaultInstance;
+    public static FileData getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public FileData getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FileData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
           int tag = input.readTag();
           switch (tag) {
             case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
+              done = true;
+              break;
             default: {
               if (!parseUnknownField(input, unknownFields,
                                      extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
-                onChanged();
-                return this;
+                done = true;
               }
               break;
             }
@@ -5386,26 +8031,695 @@ public final class BatchProto {
             }
           }
         }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
       }
-      
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<FileData> PARSER =
+        new com.google.protobuf.AbstractParser<FileData>() {
+      public FileData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FileData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FileData> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional string eventType = 1;
+    public static final int EVENTTYPE_FIELD_NUMBER = 1;
+    private java.lang.Object eventType_;
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    public boolean hasEventType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    public java.lang.String getEventType() {
+      java.lang.Object ref = eventType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          eventType_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string eventType = 1;</code>
+     *
+     * <pre>
+     **变更数据的操作类型(I/U/D/C/A/E)*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getEventTypeBytes() {
+      java.lang.Object ref = eventType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string namespace = 2;
+    public static final int NAMESPACE_FIELD_NUMBER = 2;
+    private java.lang.Object namespace_;
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    public boolean hasNamespace() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    public java.lang.String getNamespace() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          namespace_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string namespace = 2;</code>
+     *
+     * <pre>
+     **Aranda中特有的*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getNamespaceBytes() {
+      java.lang.Object ref = namespace_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        namespace_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string path = 3;
+    public static final int PATH_FIELD_NUMBER = 3;
+    private java.lang.Object path_;
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    public boolean hasPath() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    public java.lang.String getPath() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          path_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string path = 3;</code>
+     *
+     * <pre>
+     **文件的路径*
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getPathBytes() {
+      java.lang.Object ref = path_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        path_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional int64 lastModifiedTime = 4;
+    public static final int LASTMODIFIEDTIME_FIELD_NUMBER = 4;
+    private long lastModifiedTime_;
+    /**
+     * <code>optional int64 lastModifiedTime = 4;</code>
+     *
+     * <pre>
+     **文件最后一次修改时间*
+     * </pre>
+     */
+    public boolean hasLastModifiedTime() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int64 lastModifiedTime = 4;</code>
+     *
+     * <pre>
+     **文件最后一次修改时间*
+     * </pre>
+     */
+    public long getLastModifiedTime() {
+      return lastModifiedTime_;
+    }
+
+    // optional int64 size = 5;
+    public static final int SIZE_FIELD_NUMBER = 5;
+    private long size_;
+    /**
+     * <code>optional int64 size = 5;</code>
+     *
+     * <pre>
+     **文件的大小*
+     * </pre>
+     */
+    public boolean hasSize() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int64 size = 5;</code>
+     *
+     * <pre>
+     **文件的大小*
+     * </pre>
+     */
+    public long getSize() {
+      return size_;
+    }
+
+    // optional int64 tableId = 6;
+    public static final int TABLEID_FIELD_NUMBER = 6;
+    private long tableId_;
+    /**
+     * <code>optional int64 tableId = 6;</code>
+     */
+    public boolean hasTableId() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional int64 tableId = 6;</code>
+     */
+    public long getTableId() {
+      return tableId_;
+    }
+
+    // optional int64 pairId = 9;
+    public static final int PAIRID_FIELD_NUMBER = 9;
+    private long pairId_;
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
+    public boolean hasPairId() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int64 pairId = 9;</code>
+     *
+     * <pre>
+     **映射规则id*
+     * </pre>
+     */
+    public long getPairId() {
+      return pairId_;
+    }
+
+    private void initFields() {
+      eventType_ = "";
+      namespace_ = "";
+      path_ = "";
+      lastModifiedTime_ = 0L;
+      size_ = 0L;
+      tableId_ = 0L;
+      pairId_ = 0L;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getEventTypeBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getNamespaceBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, getPathBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt64(4, lastModifiedTime_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt64(5, size_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeInt64(6, tableId_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt64(9, pairId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getEventTypeBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getNamespaceBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getPathBytes());
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, lastModifiedTime_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, size_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, tableId_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, pairId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.alibaba.otter.node.etl.model.protobuf.FileData}
+     *
+     * <pre>
+     **文件对象*
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.class, com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder.class);
+      }
+
+      // Construct using com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        eventType_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        namespace_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        path_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        lastModifiedTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        size_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        tableId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pairId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor;
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData getDefaultInstanceForType() {
+        return com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance();
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData build() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData buildPartial() {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData result = new com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.eventType_ = eventType_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.namespace_ = namespace_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.path_ = path_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.lastModifiedTime_ = lastModifiedTime_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.size_ = size_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.tableId_ = tableId_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.pairId_ = pairId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData) {
+          return mergeFrom((com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData other) {
+        if (other == com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.getDefaultInstance()) return this;
+        if (other.hasEventType()) {
+          bitField0_ |= 0x00000001;
+          eventType_ = other.eventType_;
+          onChanged();
+        }
+        if (other.hasNamespace()) {
+          bitField0_ |= 0x00000002;
+          namespace_ = other.namespace_;
+          onChanged();
+        }
+        if (other.hasPath()) {
+          bitField0_ |= 0x00000004;
+          path_ = other.path_;
+          onChanged();
+        }
+        if (other.hasLastModifiedTime()) {
+          setLastModifiedTime(other.getLastModifiedTime());
+        }
+        if (other.hasSize()) {
+          setSize(other.getSize());
+        }
+        if (other.hasTableId()) {
+          setTableId(other.getTableId());
+        }
+        if (other.hasPairId()) {
+          setPairId(other.getPairId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
       private int bitField0_;
-      
+
       // optional string eventType = 1;
       private java.lang.Object eventType_ = "";
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
       public boolean hasEventType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getEventType() {
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
+      public java.lang.String getEventType() {
         java.lang.Object ref = eventType_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           eventType_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setEventType(String value) {
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getEventTypeBytes() {
+        java.lang.Object ref = eventType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
+      public Builder setEventType(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5414,34 +8728,96 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
       public Builder clearEventType() {
         bitField0_ = (bitField0_ & ~0x00000001);
         eventType_ = getDefaultInstance().getEventType();
         onChanged();
         return this;
       }
-      void setEventType(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
+      /**
+       * <code>optional string eventType = 1;</code>
+       *
+       * <pre>
+       **变更数据的操作类型(I/U/D/C/A/E)*
+       * </pre>
+       */
+      public Builder setEventTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         eventType_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string namespace = 2;
       private java.lang.Object namespace_ = "";
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
       public boolean hasNamespace() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public String getNamespace() {
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
+      public java.lang.String getNamespace() {
         java.lang.Object ref = namespace_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           namespace_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setNamespace(String value) {
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getNamespaceBytes() {
+        java.lang.Object ref = namespace_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          namespace_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
+      public Builder setNamespace(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5450,34 +8826,96 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
       public Builder clearNamespace() {
         bitField0_ = (bitField0_ & ~0x00000002);
         namespace_ = getDefaultInstance().getNamespace();
         onChanged();
         return this;
       }
-      void setNamespace(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
+      /**
+       * <code>optional string namespace = 2;</code>
+       *
+       * <pre>
+       **Aranda中特有的*
+       * </pre>
+       */
+      public Builder setNamespaceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
         namespace_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional string path = 3;
       private java.lang.Object path_ = "";
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
       public boolean hasPath() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public String getPath() {
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
+      public java.lang.String getPath() {
         java.lang.Object ref = path_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
           path_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
-      public Builder setPath(String value) {
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getPathBytes() {
+        java.lang.Object ref = path_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          path_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
+      public Builder setPath(
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5486,113 +8924,228 @@ public final class BatchProto {
         onChanged();
         return this;
       }
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
       public Builder clearPath() {
         bitField0_ = (bitField0_ & ~0x00000004);
         path_ = getDefaultInstance().getPath();
         onChanged();
         return this;
       }
-      void setPath(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000004;
+      /**
+       * <code>optional string path = 3;</code>
+       *
+       * <pre>
+       **文件的路径*
+       * </pre>
+       */
+      public Builder setPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
         path_ = value;
         onChanged();
+        return this;
       }
-      
+
       // optional int64 lastModifiedTime = 4;
       private long lastModifiedTime_ ;
+      /**
+       * <code>optional int64 lastModifiedTime = 4;</code>
+       *
+       * <pre>
+       **文件最后一次修改时间*
+       * </pre>
+       */
       public boolean hasLastModifiedTime() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
+      /**
+       * <code>optional int64 lastModifiedTime = 4;</code>
+       *
+       * <pre>
+       **文件最后一次修改时间*
+       * </pre>
+       */
       public long getLastModifiedTime() {
         return lastModifiedTime_;
       }
+      /**
+       * <code>optional int64 lastModifiedTime = 4;</code>
+       *
+       * <pre>
+       **文件最后一次修改时间*
+       * </pre>
+       */
       public Builder setLastModifiedTime(long value) {
         bitField0_ |= 0x00000008;
         lastModifiedTime_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 lastModifiedTime = 4;</code>
+       *
+       * <pre>
+       **文件最后一次修改时间*
+       * </pre>
+       */
       public Builder clearLastModifiedTime() {
         bitField0_ = (bitField0_ & ~0x00000008);
         lastModifiedTime_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 size = 5;
       private long size_ ;
+      /**
+       * <code>optional int64 size = 5;</code>
+       *
+       * <pre>
+       **文件的大小*
+       * </pre>
+       */
       public boolean hasSize() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
+      /**
+       * <code>optional int64 size = 5;</code>
+       *
+       * <pre>
+       **文件的大小*
+       * </pre>
+       */
       public long getSize() {
         return size_;
       }
+      /**
+       * <code>optional int64 size = 5;</code>
+       *
+       * <pre>
+       **文件的大小*
+       * </pre>
+       */
       public Builder setSize(long value) {
         bitField0_ |= 0x00000010;
         size_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 size = 5;</code>
+       *
+       * <pre>
+       **文件的大小*
+       * </pre>
+       */
       public Builder clearSize() {
         bitField0_ = (bitField0_ & ~0x00000010);
         size_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 tableId = 6;
       private long tableId_ ;
+      /**
+       * <code>optional int64 tableId = 6;</code>
+       */
       public boolean hasTableId() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
+      /**
+       * <code>optional int64 tableId = 6;</code>
+       */
       public long getTableId() {
         return tableId_;
       }
+      /**
+       * <code>optional int64 tableId = 6;</code>
+       */
       public Builder setTableId(long value) {
         bitField0_ |= 0x00000020;
         tableId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 tableId = 6;</code>
+       */
       public Builder clearTableId() {
         bitField0_ = (bitField0_ & ~0x00000020);
         tableId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // optional int64 pairId = 9;
       private long pairId_ ;
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public boolean hasPairId() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public long getPairId() {
         return pairId_;
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public Builder setPairId(long value) {
         bitField0_ |= 0x00000040;
         pairId_ = value;
         onChanged();
         return this;
       }
+      /**
+       * <code>optional int64 pairId = 9;</code>
+       *
+       * <pre>
+       **映射规则id*
+       * </pre>
+       */
       public Builder clearPairId() {
         bitField0_ = (bitField0_ & ~0x00000040);
         pairId_ = 0L;
         onChanged();
         return this;
       }
-      
+
       // @@protoc_insertion_point(builder_scope:com.alibaba.otter.node.etl.model.protobuf.FileData)
     }
-    
+
     static {
       defaultInstance = new FileData(true);
       defaultInstance.initFields();
     }
-    
+
     // @@protoc_insertion_point(class_scope:com.alibaba.otter.node.etl.model.protobuf.FileData)
   }
-  
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor;
   private static
@@ -5623,7 +9176,7 @@ public final class BatchProto {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable;
-  
+
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
@@ -5673,49 +9226,37 @@ public final class BatchProto {
           internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_Identity_descriptor,
-              new java.lang.String[] { "ChannelId", "PipelineId", "ProcessId", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Identity.Builder.class);
+              new java.lang.String[] { "ChannelId", "PipelineId", "ProcessId", });
           internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_RowBatch_descriptor,
-              new java.lang.String[] { "Identity", "Rows", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowBatch.Builder.class);
+              new java.lang.String[] { "Identity", "Rows", });
           internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_FileBatch_descriptor,
-              new java.lang.String[] { "Identity", "Files", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileBatch.Builder.class);
+              new java.lang.String[] { "Identity", "Files", });
           internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_descriptor =
             getDescriptor().getMessageTypes().get(3);
           internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_RowData_descriptor,
-              new java.lang.String[] { "TableId", "SchemaName", "TableName", "EventType", "OldKeys", "Keys", "Columns", "ExecuteTime", "PairId", "SyncMode", "SyncConsistency", "Size", "Remedy", "Sql", "DdlSchemaName", "Hint", "WithoutSchema", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.RowData.Builder.class);
+              new java.lang.String[] { "TableId", "SchemaName", "TableName", "EventType", "OldKeys", "Keys", "Columns", "ExecuteTime", "PairId", "SyncMode", "SyncConsistency", "Size", "Remedy", "Sql", "DdlSchemaName", "Hint", "WithoutSchema", });
           internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_Column_descriptor,
-              new java.lang.String[] { "Index", "Name", "Value", "IsPrimaryKey", "IsNull", "Type", "IsUpdate", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.Column.Builder.class);
+              new java.lang.String[] { "Index", "Name", "Value", "IsPrimaryKey", "IsNull", "Type", "IsUpdate", });
           internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor =
             getDescriptor().getMessageTypes().get(5);
           internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_com_alibaba_otter_node_etl_model_protobuf_FileData_descriptor,
-              new java.lang.String[] { "EventType", "Namespace", "Path", "LastModifiedTime", "Size", "TableId", "PairId", },
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.class,
-              com.alibaba.otter.node.etl.model.protobuf.BatchProto.FileData.Builder.class);
+              new java.lang.String[] { "EventType", "Namespace", "Path", "LastModifiedTime", "Size", "TableId", "PairId", });
           return null;
         }
       };
@@ -5724,6 +9265,6 @@ public final class BatchProto {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
-  
+
   // @@protoc_insertion_point(outer_class_scope)
 }
